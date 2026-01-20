@@ -1,0 +1,8 @@
+[credential]
+	credentialStore = gpg
+	helper = manager
+[user]
+	name = amitshky
+	email = amitshkymail@gmail.com
+[init]
+	defaultBranch = main
