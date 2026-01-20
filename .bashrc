@@ -107,7 +107,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:~/.cargo/bin/:/sbin/:/home/almostblue/.local/bin:"
+export PATH="$PATH:~/.cargo/bin/:/sbin/:~/.local/bin:"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -148,8 +148,6 @@ alias cdb="cd ~/suckless/dwmblocks-async/; sudo make clean install; cd -;" # com
 alias cdm="cd ~/suckless/dmenu/; sudo make clean install; cd -;" # compile dmenu
 alias csl="cd ~/suckless/slock/; sudo make clean install; cd -;" # compile slock
 alias qi="qimgv"
-
-# alias spotify="flatpak run com.spotify.Client"
 
 # yazi
 function y() {
