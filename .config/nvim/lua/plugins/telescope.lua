@@ -1,0 +1,21 @@
+return {
+  -- 'nvim-telescope/telescope.nvim',
+  -- branch = '0.1.x',
+  -- dependencies = { 'nvim-lua/plenary.nvim' },
+  -- config = function()
+  --   require("telescope").setup({
+  --     defaults = {
+  --       path_display = { "truncate" },
+  --       file_ignore_patterns = {
+  --         "node_modules/",
+  --         "bin/",
+  --         "obj/",
+  --         ".git/",
+  --         ".vs/",
+  --         ".cache/",
+  --         ".svn/",
+  --       },
+  --     },
+  --   })
+  -- end,
+}
