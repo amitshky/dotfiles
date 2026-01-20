@@ -22,5 +22,5 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-setup/
-ublock/
+./setup/
+./ublock/
