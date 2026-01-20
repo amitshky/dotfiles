@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-feh --bg-fill ~/pictures/wallpaper.png
+feh --bg-fill ~/dotfiles/setup/wallpaper.png
 picom -b
 
 flameshot &

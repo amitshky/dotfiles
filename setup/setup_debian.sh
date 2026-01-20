@@ -37,8 +37,6 @@ cd ../slock
 sudo make clean install
 cd ~
 
-cp ~/dotfiles/setup/wallpaper.png ~/pictures
-
 # copy configs
 cd ~/dotfiles
 stow .
