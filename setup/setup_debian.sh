@@ -15,12 +15,9 @@ curl -fsSL https://download.opensuse.org/repositories/home:justkidding/Debian_13
 sudo apt update
 sudo apt install -y ueberzugpp
 
-git config --global user.name amitshky
-git config --global user.email amitshkymail@gmail.com
-
 # clone a few repos
 mkdir -p ~/{dev,suckless,.fonts,.config,downloads,documents,pictures,videos} /mnt/{hdd,ssd,windows,camera}
-git clone https://amitshky@github.com/amitshky/configFiles ~/dev/config
+git clone https://amitshky@github.com/amitshky/dotfiles ~/dotfiles
 git clone https://amitshky@github.com/amitshky/st ~/suckless/st
 git clone https://amitshky@github.com/amitshky/dwm ~/suckless/dwm
 git clone https://amitshky@github.com/amitshky/dmenu ~/suckless/dmenu
@@ -40,21 +37,12 @@ cd ../slock
 sudo make clean install
 cd ~
 
-cp ~/dev/setup/wallpaper.png ~/pictures
+cp ~/dotfiles/setup/wallpaper.png ~/pictures
 
 # copy configs
-# TODO: this should be replaced with stow
-cp ~/dev/config/linux_config/.xinitrc ~/
-cp ~/dev/config/linux_config/.Xresources ~/
-cp ~/dev/config/linux_config/.profile ~/
-cp ~/dev/config/linux_config/user-dirs.dirs ~/.config/
-cp ~/dev/config/linux_config/mimeapps.list ~/.config/
-cp ~/dev/config/bash/debian/.bashrc ~/
-cp ~/dev/config/bash/debian/.bash_profile ~/
-cp ~/dev/config/tmux ~/.config/ -r
-mkdir -p ~/.config/menus
-cp ~/dev/config/linux_config/applications.menu ~/.config/menus/
-cp ~/dev/config/linux_config/gpg-agent.conf ~/.gnupg/
+cd ~/dotfiles
+stow .
+cd ~
 
 # install jetbrains mono and gcm
 cd ~/downloads
@@ -65,11 +53,6 @@ fc-cache
 wget https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.1/gcm-linux_amd64.2.6.1.deb
 sudo apt install -y ./gcm-linux_amd64.2.6.1.deb 
 cd ~
-
-# gtk theming
-cp ~/dev/config/linux_config/gtk-3.0/ ~/.config -r
-cp ~/dev/config/linux_config/gtk-4.0/ ~/.config -r
-cp ~/dev/config/linux_config/.gtkrc-2.0 ~/
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
