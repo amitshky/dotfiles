@@ -2,13 +2,14 @@
 set -e
 
 export DEBIAN_FRONTEND=noninteractive
-export PWD=$(pwd)
+PWD=$(pwd)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # backup present sources.list
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup.$(date +%F)
 # WARNING: these sources are specifically for debian 13 (Trixie)
 # includes sources for nvidia driver
-sudo cp "$PWD/dotfiles/setup/sources.list" /etc/apt/sources.list
+sudo cp "$SCRIPT_DIR/sources.list" /etc/apt/sources.list
 
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -26,7 +27,8 @@ sudo apt-get update
 sudo apt-get install -qq -y ueberzugpp
 
 # clone a few repos
-sudo mkdir -p $HOME/{dev,suckless,.fonts,.config,.local,downloads,documents,desktop,music,pictures,videos} /mnt/{hdd,ssd,windows,camera}
+mkdir -p $HOME/{dev,suckless,.fonts,.config,.local,downloads,documents,desktop,music,pictures,videos}
+sudo mkdir /mnt/{hdd,ssd,windows,camera}
 git clone https://amitshky@github.com/amitshky/st $HOME/suckless/st
 git clone https://amitshky@github.com/amitshky/dwm $HOME/suckless/dwm
 git clone https://amitshky@github.com/amitshky/dmenu $HOME/suckless/dmenu
