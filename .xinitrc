@@ -12,12 +12,12 @@ dunst &
 # for dolphin
 /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
-$HOME/dev/config/scripts/linux/use_external_monitor.sh &
-$HOME/dev/config/scripts/linux/volumeSignal.sh &
-$HOME/dev/config/scripts/linux/brightnessSignal.sh &
-$HOME/dev/config/scripts/linux/batterySignal.sh &
-$HOME/dev/config/scripts/linux/hideCursor.sh &
-$HOME/dev/config/scripts/linux/volumeLevel.sh &
+use_external_monitor &
+volume_signal &
+brightness_signal &
+battery_signal &
+hide_cursor &
+volume_level &
 
 xset -dpms # disable display power management signal
 
