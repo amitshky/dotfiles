@@ -16,36 +16,29 @@ sudo apt update
 sudo apt install -y ueberzugpp
 
 # clone a few repos
-sudo mkdir -p ~/{dev,suckless,.fonts,.config,downloads,documents,desktop,music,pictures,videos} /mnt/{hdd,ssd,windows,camera}
-git clone https://amitshky@github.com/amitshky/dotfiles ~/dotfiles
-git clone https://amitshky@github.com/amitshky/st ~/suckless/st
-git clone https://amitshky@github.com/amitshky/dwm ~/suckless/dwm
-git clone https://amitshky@github.com/amitshky/dmenu ~/suckless/dmenu
-git clone https://amitshky@github.com/amitshky/dwmblocks-async ~/suckless/dwmblocks-async
-git clone https://amitshky@github.com/amitshky/slock ~/suckless/slock
+sudo mkdir -p $HOME/{dev,suckless,.fonts,.config,.local,downloads,documents,desktop,music,pictures,videos} /mnt/{hdd,ssd,windows,camera}
+git clone https://amitshky@github.com/amitshky/st $HOME/suckless/st
+git clone https://amitshky@github.com/amitshky/dwm $HOME/suckless/dwm
+git clone https://amitshky@github.com/amitshky/dmenu $HOME/suckless/dmenu
+git clone https://amitshky@github.com/amitshky/dwmblocks-async $HOME/suckless/dwmblocks-async
+git clone https://amitshky@github.com/amitshky/slock $HOME/suckless/slock
 
 # install dwm and other suckless tools
-cd ~/suckless/dwm
-sudo make clean install
-cd ../st
-sudo make clean install
-cd ../dmenu
-sudo make clean install
-cd ../dwmblocks-async
-sudo make clean install
-cd ../slock
-sudo make clean install
-cd ~
+sudo make -C "$HOME/suckless/dwm" clean install
+sudo make -C "$HOME/suckless/st" clean install
+sudo make -C "$HOME/suckless/dmenu" clean install
+sudo make -C "$HOME/suckless/dwmblocks-async" clean install
+sudo make -C "$HOME/suckless/slock" clean install
 
 # copy configs
-cd ~/dotfiles
+cd $HOME/dotfiles
 stow .
-cd ~
+cd $HOME
 
 # install fonts
 curl -sL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip -o /tmp/JetBrainsMono.zip
-mkdir -p ~/.fonts/JetBrainsMono/
-unzip /tmp/JetBrainsMono.zip -d ~/.fonts/JetBrainsMono/ 
+mkdir -p $HOME/.fonts/JetBrainsMono/
+unzip /tmp/JetBrainsMono.zip -d $HOME/.fonts/JetBrainsMono/ 
 fc-cache
 
 # install programs from .deb

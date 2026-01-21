@@ -107,7 +107,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:~/.cargo/bin/:/sbin/:~/.local/bin:"
+export PATH="$PATH:~/.cargo/bin/:/sbin/:~/.local/bin:~/.local/scripts/"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -134,20 +134,20 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias lg="lazygit"
-# alias notes="nvim ~/documents/ObsidianVaults/_Obsidian"
 alias t="./tmux.sh"
 alias n="nvim ."
 alias wd="cd ~/dev/"
-alias wc="cd ~/dev/config/"
+alias wc="cd ~/dotfiles/"
 alias wo="cd ~/documents/Obsidian/"
 alias wu="cd ~/documents/notes/"
-# alias cat="bat" # use \cat to override this alias and use the actual cat command
-alias cdwm="cd ~/suckless/dwm/; sudo make clean install; cd -;" # compile dwm
-alias cst="cd ~/suckless/st/; sudo make clean install; cd -;" # compile st
-alias cdb="cd ~/suckless/dwmblocks-async/; sudo make clean install; cd -;" # compile dwmblocks-async
-alias cdm="cd ~/suckless/dmenu/; sudo make clean install; cd -;" # compile dmenu
-alias csl="cd ~/suckless/slock/; sudo make clean install; cd -;" # compile slock
 alias qi="qimgv"
+# alias cat="bat" # use \cat to override this alias and use the actual cat command
+
+alias cdwm="sudo make -C \"$HOME/suckless/dwm\" clean install"
+alias cst="sudo make -C \"$HOME/suckless/st\" clean install"
+alias cdm="sudo make -C \"$HOME/suckless/dmenu\" clean install"
+alias cdb="sudo make -C \"$HOME/suckless/dwmblocks-async\" clean install"
+alias csl="sudo make -C \"$HOME/suckless/slock\" clean install"
 
 # yazi
 function y() {

@@ -1,13 +1,13 @@
 #! /usr/bin/env bash
 
-rm -r $HOME/.cache/thumbnails/* 2>/dev/null
-rm -r $HOME/.cache/ueberzugpp/* 2>/dev/null
-rm -r $HOME/.var/app/org.kde.dolphin/cache/thumbnails/* 2>/dev/null
-rm -r /tmp/yazi* 2>/dev/null
+rm -r $HOME/.cache/thumbnails/*
+rm -r $HOME/.cache/ueberzugpp/*
+rm -r $HOME/.var/app/org.kde.dolphin/cache/thumbnails/*
+rm -r /tmp/yazi*
 
-rm $HOME/.local/share/recently-used.xbel 2>/dev/null
-rm $HOME/.local/share/qBittorrent/logs/qbittorrent.log 2>/dev/null
-rm $HOME/.local/share/ark/ark_recentfiles 2>/dev/null
+rm $HOME/.local/share/recently-used.xbel
+rm $HOME/.local/share/qBittorrent/logs/qbittorrent.log
+rm $HOME/.local/share/ark/ark_recentfiles
 
-pkill copyq 2>/dev/null
+pkill copyq
 copyq &
