@@ -16,7 +16,7 @@ sudo apt update
 sudo apt install -y ueberzugpp
 
 # clone a few repos
-mkdir -p ~/{dev,suckless,.fonts,.config,downloads,documents,pictures,videos} /mnt/{hdd,ssd,windows,camera}
+sudo mkdir -p ~/{dev,suckless,.fonts,.config,downloads,documents,desktop,music,pictures,videos} /mnt/{hdd,ssd,windows,camera}
 git clone https://amitshky@github.com/amitshky/dotfiles ~/dotfiles
 git clone https://amitshky@github.com/amitshky/st ~/suckless/st
 git clone https://amitshky@github.com/amitshky/dwm ~/suckless/dwm
@@ -42,19 +42,21 @@ cd ~/dotfiles
 stow .
 cd ~
 
-# install jetbrains mono and gcm
-cd ~/downloads
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+# install fonts
+curl -sL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip -o /tmp/JetBrainsMono.zip
 mkdir -p ~/.fonts/JetBrainsMono/
-unzip JetBrainsMono.zip -d ~/.fonts/JetBrainsMono/ 
+unzip /tmp/JetBrainsMono.zip -d ~/.fonts/JetBrainsMono/ 
 fc-cache
-wget https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.1/gcm-linux_amd64.2.6.1.deb
-sudo apt install -y ./gcm-linux_amd64.2.6.1.deb 
-cd ~
+
+# install programs from .deb
+curl -s "https://api.github.com/repos/git-ecosystem/git-credential-manager/releases/latest" | grep browser_download_url | grep 'gcm-linux_amd64.*\.deb' | cut -d '"' -f 4 | xargs curl -sL -o /tmp/gcm.deb
+curl -sL "https://discord.com/api/download?platform=linux&format=deb" -o /tmp/discord.deb
+sudo dpkg -i /tmp/gcm.deb /tmp/discord.deb 
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup update
+source "$HOME/.cargo/env"
 
 # install yazi
 cargo install --force yazi-build
