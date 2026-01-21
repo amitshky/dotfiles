@@ -1,15 +1,4 @@
-# Things to do after installing debian
-NOTES: checkout `../linux_config/` for some config files that are general to linux.
-
-```
-apt update
-apt full-upgrade
-```
-
-## install some essential packages
-```
-apt install xorg neovim vim git build-essential libx11-dev libxft-dev libxinerama-dev libxcb1-dev libxcb-res0-dev libx11-xcb-dev libxcb-util-dev libxrandr-dev network-manager picom feh arandr pipewire pulseaudio unzip flatpak ntfs-3g pipewire-audio-client-libraries wireplumber bluez playerctl brightnessctl tmux rfkill
-```
+# Setting up debian
 
 ## Install nvidia drivers
 - [Reference](https://wiki.debian.org/NvidiaGraphicsDrivers)
@@ -29,37 +18,6 @@ apt upgrade
 apt install nvidia-driver firmware-misc-nonfree
 ```
 
-## Download dwm, dwmblocks-async, st, and other suckless tools
-- you want to build and install these 
-    - run `make clean install` from the directories
-```
-mkdir ~/{dev,suckless,.config}
-mkdir /mnt/{hdd,ssd,windows,camera}
-git clone https://amitshky@github.com/amitshky/configFiles ~/dev/config
-git clone https://amitshky@github.com/amitshky/st ~/suckless/st
-git clone https://amitshky@github.com/amitshky/dwm ~/suckless/dwm
-git clone https://amitshky@github.com/amitshky/dmenu ~/suckless/dmenu
-git clone https://amitshky@github.com/amitshky/dwmblocks-async ~/suckless/dwmblocks-async
-git clone https://amitshky@github.com/amitshky/slock ~/suckless/slock
-```
-- compile all the suckless tools
-```
-// go to the directory (if you copy the bashrc file from ../bash/debian/, you can just use the aliases)
-// see next step ## Copy configs
-make clean install
-```
-
-## Copy configs
-```
-cp ~/dev/config/linux_config/.xinitrc ~/
-cp ~/dev/config/linux_config/.Xresources ~/
-cp ~/dev/config/linux_config/.profile ~/
-cp ~/dev/config/linux_config/user-dirs.dirs ~/.config/
-cp ~/dev/config/linux_config/mimeapps.list ~/.config/
-cp ~/dev/config/bash/debian/.bashrc ~/
-cp ~/dev/config/bash/debian/.bash_profile ~/
-```
-
 ## Install jetbrains mono nerd font
 - download jebrains mono nerd font then,
     - [download link](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip)
@@ -75,17 +33,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup update
 ```
 
-## Install some common dependencies
-```
-apt install pass gnupg2 clang clang-tools nodejs npm python3-venv python3-pip python-is-python3 ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick pinentry-gtk2 pinentry-tty lua5.1 luarocks adwaita-icon-theme adwaita-icon-theme-legacy breeze-icon-theme lxappearance qt5ct qalc xclip libavcodec-extra breeze gnome-themes-extra
-```
-- NOTE: there is both pinentry-gtk2 and pinentry-tty, you can switch using the script `$HOME/dev/config/scripts/linux/pinetrySwitch.sh`
-
-## Install rest of the packages
-```
-apt install btop firefox-esr pcmanfm keepassxc mpv qimgv lazygit gpick darktable copyq flameshot unclutter-xfixes pulsemixer syncthing dunst yt-dlp gallery-dl qbittorrent qalculate-qt okular calcurse libreoffice libreoffice-gtk3 ark krename valgrind mkvtoolnix mkvtoolnix-gui bear
-```
+## After installing some of the packages
 - NOTE: after installing pcmanfm, also move gtk-3.0 and gtk-4.0 folders to config
+- NOTE: the file manager that I have here is pcmanfm and you can use lxapperance to change the theme of the file manager
 ```
 cp ~/dev/config/linux_config/gtk-3.0/ ~/.config -r
 cp ~/dev/config/linux_config/gtk-4.0/ ~/.config -r
@@ -93,9 +43,8 @@ cp ~/dev/config/linux_config/gtk-4.0/ ~/.config -r
 # also do this for pinentry-gtk-2
 cp ~/dev/config/linux_config/.gtkrc-2.0 ~/
 ```
-- NOTE: the file manager that I have here is pcmanfm and you can use lxapperance to change the theme of the file manager
 
-### If you want to install dolphin using apt
+## If you want to install dolphin using apt
 - if you want to install dolphin, also install udisks2
     - you can query other devices (drives)
 ```
@@ -120,7 +69,8 @@ cp ~/dev/config/linux_config/applications.menu ~/.config/menus/
 ```
 nvim /etc/network/interfaces
 
-# then remove/comment the line
+# then remove/comment the lines
+
 # The primary network interface
 allow-hotplug wlp0s20f3
 iface wlp0s20f3 inet dhcp
@@ -151,12 +101,13 @@ sudo systemctl start NetworkManager
 ## Install VSCode
 - download the .deb package from [here](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
 ```
-apt install ./<file>.deb
+curl -L https://go.microsoft.com/fwlink/?LinkID=760868 -o vscode.deb
+dpkg -i ./vscode.deb
 ```
 
-## Install flatpak packages
+## Add flathub repo (flatpak)
 ```
-flatpak install obsidian protonvpn
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 ## Install packages from cargo

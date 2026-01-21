@@ -148,6 +148,7 @@ alias cst="sudo make -C \"$HOME/suckless/st\" clean install"
 alias cdm="sudo make -C \"$HOME/suckless/dmenu\" clean install"
 alias cdb="sudo make -C \"$HOME/suckless/dwmblocks-async\" clean install"
 alias csl="sudo make -C \"$HOME/suckless/slock\" clean install"
+alias csall="cdwm && cdm && cdb && cst && csl" # compile all suckless tools
 
 # yazi
 function y() {

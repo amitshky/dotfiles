@@ -9,5 +9,5 @@ rm $HOME/.local/share/recently-used.xbel
 rm $HOME/.local/share/qBittorrent/logs/qbittorrent.log
 rm $HOME/.local/share/ark/ark_recentfiles
 
-pkill copyq
+killall copyq
 copyq &

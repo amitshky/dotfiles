@@ -44,7 +44,11 @@ fc-cache
 # install programs from .deb
 curl -s "https://api.github.com/repos/git-ecosystem/git-credential-manager/releases/latest" | grep browser_download_url | grep 'gcm-linux_amd64.*\.deb' | cut -d '"' -f 4 | xargs curl -sL -o /tmp/gcm.deb
 curl -sL "https://discord.com/api/download?platform=linux&format=deb" -o /tmp/discord.deb
-sudo dpkg -i /tmp/gcm.deb /tmp/discord.deb 
+curl -L "https://go.microsoft.com/fwlink/?LinkID=760868" -o /tmp/vscode.deb
+curl -L "http://ftp.uk.debian.org/debian/pool/contrib/t/torbrowser-launcher/torbrowser-launcher_0.3.7-3_amd64.deb" -o /tmp/tor.deb
+sudo dpkg -i /tmp/gcm.deb /tmp/discord.deb
+# using apt to avoid vscode prompt and for some reason tor doesnt get installed using dpkg
+sudo apt install -y /tmp/vscode.deb /tmp/tor.deb
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -61,9 +65,12 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak install -y app/md.obsidian.Obsidian/x86_64/stable com.protonvpn.ww 
 
 # this just freezes dolphin and other apps when they start so remove them
-sudo apt purge xdg-desktop-portal* -y
+sudo apt purge -y xdg-desktop-portal*
 sudo apt autoremove -y
 
 # enable network manager service
 sudo systemctl start NetworkManager
 sudo systemctl enable NetworkManager
+
+# speeds up boot-time
+sudo systemctl disable NetworkManager-wait-online.service

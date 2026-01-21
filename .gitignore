@@ -3,4 +3,4 @@ copyq.lock
 copyq.pub
 copyq_geometry.ini
 copyq_tabs.ini
-
+*.dat
