@@ -66,8 +66,8 @@ echo "install rust"
 # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # WARNING: this will run standard rust install (selecting the first option on install)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+. "$HOME/.cargo/env"
 rustup update
-source "$HOME/.cargo/env"
 
 echo "install yazi"
 cargo install --force yazi-build
