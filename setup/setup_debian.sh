@@ -44,7 +44,8 @@ sudo make -C "$HOME/suckless/slock" clean install
 
 echo "copy configs"
 cd $SCRIPT_DIR/..
-stow .
+stow --adopt .
+git restore .
 cd $PWD
 
 echo "install fonts"
