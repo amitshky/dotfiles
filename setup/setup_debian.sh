@@ -2,10 +2,13 @@
 set -e
 
 export DEBIAN_FRONTEND=noninteractive
+export PWD=$(pwd)
 
+# backup present sources.list
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup.$(date +%F)
 # WARNING: these sources are specifically for debian 13 (Trixie)
 # includes sources for nvidia driver
-sudo cp ./sources.list /etc/apt/
+sudo cp "$PWD/sources.list" /etc/apt/sources.list
 
 sudo apt-get update
 sudo apt-get upgrade -y
