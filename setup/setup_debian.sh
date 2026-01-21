@@ -1,4 +1,7 @@
 #! /usr/bin/env bash
+set -e
+
+export DEBIAN_FRONTEND=noninteractive
 
 # WARNING: these sources are specifically for debian 13 (Trixie)
 # includes sources for nvidia driver
