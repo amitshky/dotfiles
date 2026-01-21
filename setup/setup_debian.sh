@@ -43,7 +43,7 @@ sudo make -C "$HOME/suckless/dwmblocks-async" clean install
 sudo make -C "$HOME/suckless/slock" clean install
 
 # copy configs
-cd $PWD/dotfiles
+cd $SCRIPT_DIR/..
 stow .
 cd $PWD
 
@@ -56,14 +56,16 @@ fc-cache
 # install programs from .deb
 curl -s "https://api.github.com/repos/git-ecosystem/git-credential-manager/releases/latest" | grep browser_download_url | grep 'gcm-linux_amd64.*\.deb' | cut -d '"' -f 4 | xargs curl -sL -o /tmp/gcm.deb
 curl -sL "https://discord.com/api/download?platform=linux&format=deb" -o /tmp/discord.deb
-curl -L "https://go.microsoft.com/fwlink/?LinkID=760868" -o /tmp/vscode.deb
-curl -L "http://ftp.uk.debian.org/debian/pool/contrib/t/torbrowser-launcher/torbrowser-launcher_0.3.7-3_amd64.deb" -o /tmp/tor.deb
+curl -sL "https://go.microsoft.com/fwlink/?LinkID=760868" -o /tmp/vscode.deb
+curl -sL "http://ftp.uk.debian.org/debian/pool/contrib/t/torbrowser-launcher/torbrowser-launcher_0.3.7-3_amd64.deb" -o /tmp/tor.deb
 sudo dpkg -i /tmp/gcm.deb /tmp/discord.deb
 # using apt to avoid vscode prompt and for some reason tor doesnt get installed using dpkg
 sudo apt-get install -qq -y /tmp/vscode.deb /tmp/tor.deb
 
 # install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# WARNING: this will run standard rust install (selecting the first option on install)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 rustup update
 source "$HOME/.cargo/env"
 
