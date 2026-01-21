@@ -227,4 +227,7 @@ apt install <torbrowser>.deb
 update-desktop-database $HOME/.local/share/applications/
 ```
 
-
+## To change the font/font-size of TTY
+```sh
+dpkg-reconfigure console-setup
+```

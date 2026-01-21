@@ -1,5 +1,9 @@
 #! /usr/bin/env bash
 
+# WARNING: these sources are specifically for debian 13 (Trixie)
+# includes sources for nvidia driver
+sudo cp ./sources.list /etc/apt/
+
 sudo apt-get update
 sudo apt-get upgrade -y
 
@@ -63,6 +67,10 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 # install flatpak packages
 sudo flatpak install -y app/md.obsidian.Obsidian/x86_64/stable com.protonvpn.ww 
+
+# install nvidia drivers
+
+sudo apt-get install -y linux-headers-amd64 nvidia-kernel-dkms nvidia-driver
 
 # this just freezes dolphin and other apps when they start so remove them
 sudo apt-get purge -y xdg-desktop-portal*
