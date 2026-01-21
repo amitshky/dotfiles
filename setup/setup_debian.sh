@@ -41,9 +41,9 @@ sudo make -C "$HOME/suckless/dwmblocks-async" clean install
 sudo make -C "$HOME/suckless/slock" clean install
 
 # copy configs
-cd $HOME/dotfiles
+cd $PWD/dotfiles
 stow .
-cd $HOME
+cd $PWD
 
 # install fonts
 curl -sL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip -o /tmp/JetBrainsMono.zip
