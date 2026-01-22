@@ -31,4 +31,12 @@ return {
       require("mini.surround").setup()
     end,
   },
+
+  {
+    'nvim-mini/mini.extra',
+    version = '*',
+    config = function()
+      require("mini.extra").setup()
+    end,
+  },
 }

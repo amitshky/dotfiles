@@ -42,15 +42,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
         { desc = "Restart LSP", buffer = args.buf })
     end
 
-    vim.keymap.set('n', '<leader>ls', '<cmd>Telescope lsp_document_symbols symbol_width=50<cr>',
+    vim.keymap.set('n', '<leader>ls', '<cmd>Pick lsp scope="document_symbol"<cr>',
       { desc = "Document symbols", buffer = args.buf })
-    vim.keymap.set('n', '<leader>lS', '<cmd>Telescope lsp_dynamic_workspace_symbols symbol_width=50<cr>',
+    vim.keymap.set('n', '<leader>lS', '<cmd>Pick lsp scope="workspace_symbol"<cr>',
       { desc = "Workspace symbols", buffer = args.buf })
 
-    vim.keymap.set('n', '<leader>lR', '<cmd>Telescope lsp_references<cr>',
-      { desc = "Go to references (Telescope)", buffer = args.buf })
-    vim.keymap.set('n', 'grr', '<cmd>Telescope lsp_references<cr>',
-      { desc = "Go to references (Telescope)", buffer = args.buf })
+    vim.keymap.set('n', '<leader>lR', '<cmd>Pick lsp scope="references"<cr>',
+      { desc = "Go to references", buffer = args.buf })
+    vim.keymap.set('n', 'grr', '<cmd>Pick lsp scope="references"<cr>',
+      { desc = "Go to references", buffer = args.buf })
 
     vim.keymap.set('n', '<leader>lo', '<cmd>ClangdSwitchSourceHeader<cr>',
       { desc = "Switch source and header (C++)", buffer = args.buf })
