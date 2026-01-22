@@ -90,3 +90,6 @@ sudo systemctl enable NetworkManager
 
 # speeds up boot-time
 sudo systemctl disable NetworkManager-wait-online.service
+
+# core dump size
+ulimit -c unlimited
