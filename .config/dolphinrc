@@ -1,5 +1,6 @@
 [DetailsMode]
 ExpandableFolders=false
+PreviewSize=32
 
 [General]
 RememberOpenedTabs=false

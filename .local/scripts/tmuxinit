@@ -10,20 +10,26 @@ SESSION_NAME="$1" # change session name
 tmux has-session -t "$SESSION_NAME" 2>/dev/null
 
 if [ $? != 0 ]; then
-    # Window 1: nvim
+    # Window 0: nvim
     tmux new-session -d -s "$SESSION_NAME" -n nvim
     # activate venv if there is a .env folder
     tmux send-keys -t "$SESSION_NAME:0" "[ -d .env ] && source .env/bin/activate" C-m
     tmux send-keys -t "$SESSION_NAME:0" "nvim ." C-m
 
-    # Window 2: term
+    # Window 1: term
     tmux new-window -t "$SESSION_NAME:1" -n term
     tmux send-keys -t "$SESSION_NAME:1" "[ -d .env ] && source .env/bin/activate" C-m
 
-    # Window 3: git
+    # Window 2: git
     tmux new-window -t "$SESSION_NAME:2" -n git
     tmux send-keys -t "$SESSION_NAME:2" "[ -d .env ] && source .env/bin/activate" C-m
     tmux send-keys -t "$SESSION_NAME:2" "lazygit" C-m
+
+    # Window 3: file manager
+    tmux new-window -t "$SESSION_NAME:3" -n files
+    tmux send-keys -t "$SESSION_NAME:3" "[ -d .env ] && source .env/bin/activate" C-m
+    # open yazi
+    tmux send-keys -t "$SESSION_NAME:3" "y" C-m
 fi
 
 # Always open in first window
