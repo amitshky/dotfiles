@@ -31,10 +31,12 @@ vim.keymap.set('n', 'X', 'dd')
 -- prevents the delete operation to pollute the unnamed buffer
 vim.keymap.set('n', 'dd', '"add')
 
--- use these to not copy the text when using d or c
-vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"_d')
-vim.keymap.set({ 'n', 'v', 'x' }, '<leader>c', '"_c')
--- vim.keymap.set({ 'n', 'v', 'x' }, 'd', '"_d')
+-- use leader d or c for normal behavior of d and c
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', 'd')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>c', 'c')
+-- by default don't pollute the registers with d and c
+vim.keymap.set({ 'n', 'v', 'x' }, 'd', '"_d')
+vim.keymap.set({ 'n', 'v', 'x' }, 'c', '"_c')
 
 -- to not yank the text when pasting on selection
 vim.keymap.set('v', 'p', 'P')
