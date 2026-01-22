@@ -1,0 +1,33 @@
+#! /usr/bin/env bash
+
+#---- Usage -----
+# tmuxinit session_name
+
+
+SESSION_NAME="$1" # change session name
+
+# Check if session already exists
+tmux has-session -t "$SESSION_NAME" 2>/dev/null
+
+if [ $? != 0 ]; then
+    # Window 1: nvim
+    tmux new-session -d -s "$SESSION_NAME" -n nvim
+    # activate venv if there is a .env folder
+    tmux send-keys -t "$SESSION_NAME:0" "[ -d .env ] && source .env/bin/activate" C-m
+    tmux send-keys -t "$SESSION_NAME:0" "nvim ." C-m
+
+    # Window 2: term
+    tmux new-window -t "$SESSION_NAME:1" -n term
+    tmux send-keys -t "$SESSION_NAME:1" "[ -d .env ] && source .env/bin/activate" C-m
+
+    # Window 3: git
+    tmux new-window -t "$SESSION_NAME:2" -n git
+    tmux send-keys -t "$SESSION_NAME:2" "[ -d .env ] && source .env/bin/activate" C-m
+    tmux send-keys -t "$SESSION_NAME:2" "lazygit" C-m
+fi
+
+# Always open in first window
+tmux select-window -t $SESSION_NAME:0
+# Attach to session
+tmux attach -t $SESSION_NAME
+

@@ -7,7 +7,7 @@ rm -r /tmp/yazi*
 
 rm $HOME/.local/share/recently-used.xbel
 rm $HOME/.local/share/qBittorrent/logs/qbittorrent.log
-rm $HOME/.local/share/ark/ark_recentfiles
 
 killall copyq
+sleep 1
 copyq &
