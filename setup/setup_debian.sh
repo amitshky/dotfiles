@@ -25,7 +25,7 @@ sudo apt-get update
 sudo apt-get install -qq -y ueberzugpp
 
 echo "clone a few repos"
-mkdir -p $HOME/{dev,suckless,.fonts,.config,.local,downloads,documents,desktop,music,pictures,videos}
+mkdir -p $HOME/{dev,dev-not-mine,suckless,.fonts,.config,.local,downloads,documents,desktop,music,pictures,videos}
 sudo mkdir /mnt/{hdd,ssd,windows,camera}
 git clone https://amitshky@github.com/amitshky/st $HOME/suckless/st
 git clone https://amitshky@github.com/amitshky/dwm $HOME/suckless/dwm
@@ -93,3 +93,11 @@ sudo systemctl disable NetworkManager-wait-online.service
 
 # core dump size
 ulimit -c unlimited
+
+# install other programs
+echo "install gf2"
+git clone https://amitshky@github.com/nakst/gf.git ~/dev-not-mine/gf
+cd $HOME/dev-not-mine/gf/
+./build.sh
+sudo cp gf2 /usr/local/bin
+cd $PWD
