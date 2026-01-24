@@ -1,10 +1,15 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 #---- Usage -----
 # tmuxinit session_name
 
-
 SESSION_NAME="$1" # change session name
+
+# Check if Python venv exists
+IS_PYTHON_ENV=$([ -d .env ] && echo true || echo false)
+
+# Check if nvim session file exists
+IS_NVIM_SESSION=$([ -e session.vim ] && echo true || echo false)
 
 # Check if session already exists
 tmux has-session -t "$SESSION_NAME" 2>/dev/null
@@ -12,36 +17,38 @@ tmux has-session -t "$SESSION_NAME" 2>/dev/null
 if [ $? != 0 ]; then
     # Window 0: nvim
     tmux new-session -d -s "$SESSION_NAME" -n nvim
-    # activate venv if there is a .env folder
-    if [ -d .env ]; then
+    if [ "$IS_PYTHON_ENV" = true ]; then
         tmux send-keys -t "$SESSION_NAME:0" "source .env/bin/activate" C-m
     fi
-    tmux send-keys -t "$SESSION_NAME:0" "nvim ." C-m
+
+    if [ "$IS_NVIM_SESSION" = true ]; then
+        tmux send-keys -t "$SESSION_NAME:0" "nvim -S session.vim" C-m
+    else
+        tmux send-keys -t "$SESSION_NAME:0" "nvim ." C-m
+    fi
 
     # Window 1: term
     tmux new-window -t "$SESSION_NAME:1" -n term
-    if [ -d .env ]; then
-        tmux send-keys -t "$SESSION_NAME:0" "source .env/bin/activate" C-m
+    if [ "$IS_PYTHON_ENV" = true ]; then
+        tmux send-keys -t "$SESSION_NAME:1" "source .env/bin/activate" C-m
     fi
 
     # Window 2: git
     tmux new-window -t "$SESSION_NAME:2" -n git
-    if [ -d .env ]; then
-        tmux send-keys -t "$SESSION_NAME:0" "source .env/bin/activate" C-m
+    if [ "$IS_PYTHON_ENV" = true ]; then
+        tmux send-keys -t "$SESSION_NAME:2" "source .env/bin/activate" C-m
     fi
     tmux send-keys -t "$SESSION_NAME:2" "lazygit" C-m
 
     # Window 3: file manager
     tmux new-window -t "$SESSION_NAME:3" -n files
-    if [ -d .env ]; then
-        tmux send-keys -t "$SESSION_NAME:0" "source .env/bin/activate" C-m
+    if [ "$IS_PYTHON_ENV" = true ]; then
+        tmux send-keys -t "$SESSION_NAME:3" "source .env/bin/activate" C-m
     fi
-    # open yazi
-    tmux send-keys -t "$SESSION_NAME:3" "y" C-m
+    tmux send-keys -t "$SESSION_NAME:3" "y" C-m  # open yazi
 fi
 
-# Always open in first window
-tmux select-window -t $SESSION_NAME:0
+# Always start in first window
+tmux select-window -t "$SESSION_NAME:0"
 # Attach to session
-tmux attach -t $SESSION_NAME
-
+tmux attach -t "$SESSION_NAME"
