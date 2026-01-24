@@ -84,9 +84,11 @@ vim.keymap.set('n', '<leader>e', '<cmd>Oil<cr>', { desc = "Toggle Oil.nvim" })
 vim.keymap.set('n', '<leader>ss', '<cmd>mksession! session.vim<cr>', { desc = "Save session" })
 vim.keymap.set('n', '<leader>sl', '<cmd>source session.vim<cr>', { desc = "Load session" })
 
+-- snipe
+vim.keymap.set('n', '<leader>b', function() require("snipe").open_buffer_menu() end, { desc = "Open Snipe buffer menu" })
+
 
 require('keymaps.window')
--- require('keymaps.telescope')
 require('keymaps.pick')
 require('keymaps.lsp')
 require('keymaps.trouble')
