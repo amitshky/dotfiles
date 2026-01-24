@@ -2,8 +2,16 @@
 
 #---- Usage -----
 # tmuxinit session_name
+# OR, if no arg is provided, the directory name will be used as the session name
+# tmuxinit
 
-SESSION_NAME="$1" # change session name
+# Use argument if provided, otherwise use current directory name
+if [ -n "$1" ]; then
+    SESSION_NAME="$1"
+else
+    DIR_NAME="$(basename "$PWD")"
+    SESSION_NAME="${DIR_NAME:0:5}"
+fi
 
 # Check if Python venv exists
 IS_PYTHON_ENV=$([ -d .env ] && echo true || echo false)

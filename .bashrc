@@ -134,7 +134,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias lg="lazygit"
-alias t="./tmux.sh"
+alias ti="tmuxinit"
 alias n="nvim ."
 alias wd="cd ~/dev/"
 alias wc="cd ~/dotfiles/"
