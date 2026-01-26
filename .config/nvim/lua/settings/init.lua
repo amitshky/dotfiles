@@ -35,10 +35,22 @@ vim.o.pumwidth = 15      -- width menus such as autocompletion menu
 vim.o.path = vim.o.path .. "**"
 vim.o.signcolumn = "yes" -- show/hide a column for error, warning signs; "no", "yes", "yes:<width>" eg: "yes:1"
 vim.o.laststatus = 3
-vim.o.showtabline = 2
+vim.o.showtabline = 0
+vim.o.winbar = "%f"
 
 -- colorscheme
 vim.cmd.colorscheme("gruvbox")
+
+-- Active buffer
+vim.api.nvim_set_hl(0, "WinBar", {
+    fg = "#FABD2F", -- text color
+    bg = "#202020", -- inactive background
+})
+-- Inactive buffer
+vim.api.nvim_set_hl(0, "WinBarNC", {
+    fg = "#928374", -- text color for inactive
+    bg = "#202020", -- inactive background
+})
 
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#181818" })
 vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#151515" })
