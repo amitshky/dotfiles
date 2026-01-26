@@ -81,11 +81,11 @@ vim.keymap.set('n', '<leader>e', '<cmd>Oil<cr>', { desc = "Toggle Oil.nvim" })
 -- vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', { desc = "Toggle NvimTree" })
 
 -- sessions
-vim.keymap.set('n', '<leader>ss', '<cmd>mksession! session.vim<cr>', { desc = "Save session" })
-vim.keymap.set('n', '<leader>sl', '<cmd>source session.vim<cr>', { desc = "Load session" })
+vim.keymap.set('n', '<leader>Ss', '<cmd>mksession! session.vim<cr>', { desc = "Save session" })
+vim.keymap.set('n', '<leader>Sl', '<cmd>source session.vim<cr>', { desc = "Load session" })
 
 -- snipe
-vim.keymap.set('n', 'gb', function() require("snipe").open_buffer_menu() end, { desc = "Open Snipe buffer menu" })
+vim.keymap.set('n', '<leader>s', function() require("snipe").open_buffer_menu() end, { desc = "Open Snipe buffer menu" })
 
 
 require('keymaps.window')

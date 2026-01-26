@@ -3,7 +3,7 @@ local wk = require("which-key")
 wk.add({
   { "<leader>\\", group = "Split window" },
   { "<leader>a",  group = "Windows" },
-  { "<leader>s",  group = "Session" },
+  { "<leader>S",  group = "Session" },
   { "<leader>l",  group = "LSP" },
   { "<leader>t",  group = "Trouble" },
   { "gr",         group = "Code" },
