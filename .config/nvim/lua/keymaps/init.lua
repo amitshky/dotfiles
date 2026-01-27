@@ -85,7 +85,11 @@ vim.keymap.set('n', '<leader>Ss', '<cmd>mksession! session.vim<cr>', { desc = "S
 vim.keymap.set('n', '<leader>Sl', '<cmd>source session.vim<cr>', { desc = "Load session" })
 
 -- snipe
-vim.keymap.set('n', '<leader>s', function() require("snipe").open_buffer_menu() end, { desc = "Open Snipe buffer menu" })
+vim.keymap.set('n', '<leader>s',
+  function()
+    require("snipe").open_buffer_menu()
+  end, { desc = "Open Snipe buffer menu" }
+)
 
 
 require('keymaps.window')
