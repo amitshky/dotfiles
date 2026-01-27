@@ -36,7 +36,7 @@ vim.o.path = vim.o.path .. "**"
 vim.o.signcolumn = "yes" -- show/hide a column for error, warning signs; "no", "yes", "yes:<width>" eg: "yes:1"
 vim.o.laststatus = 3
 vim.o.showtabline = 0
-vim.o.winbar = "%f"
+vim.o.winbar = "%f %m"
 
 -- colorscheme
 vim.cmd.colorscheme("gruvbox")
