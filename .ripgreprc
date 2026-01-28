@@ -1,0 +1,11 @@
+--hidden
+--ignore-case
+
+--glob=!**/.git/**
+--glob=!**/.vs/**
+--glob=!**/node_modules/**
+--glob=!**/.cache/**
+--glob=!**/.venv/**
+--glob=!**/venv/**
+--glob=!**/.mypy_cache/**
+--glob=!**/.pytest_cache/**
