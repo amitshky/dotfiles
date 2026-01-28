@@ -81,7 +81,7 @@ echo "install nvidia drivers"
 sudo apt-get install -qq -y linux-headers-amd64 nvidia-kernel-dkms nvidia-driver
 
 # this just freezes dolphin and other apps when they start so remove them
-sudo apt-get purge -y xdg-desktop-portal*
+sudo apt-get purge -y xdg-desktop-portal* kdeconnect
 sudo apt-get autoremove -y
 
 echo "enable network manager service"

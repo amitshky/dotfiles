@@ -3,6 +3,7 @@ ExpandableFolders=false
 PreviewSize=32
 
 [General]
+ConfirmClosingMultipleTabs=false
 RememberOpenedTabs=false
 ShowFullPathInTitlebar=true
 ShowStatusBar=FullWidth

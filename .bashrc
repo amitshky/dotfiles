@@ -117,6 +117,7 @@ export BROWSER="firefox"
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GPG_TTY=$(tty)
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # customizing prompt
 git_branch_for_prompt() {

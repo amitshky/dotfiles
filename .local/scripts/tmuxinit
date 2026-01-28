@@ -14,7 +14,7 @@ else
 fi
 
 # Check if Python venv exists
-IS_PYTHON_ENV=$([ -d .env ] && echo true || echo false)
+IS_PYTHON_ENV=$([ -d .venv ] && echo true || echo false)
 
 # Check if nvim session file exists
 IS_NVIM_SESSION=$([ -e session.vim ] && echo true || echo false)
@@ -26,7 +26,7 @@ if [ $? != 0 ]; then
     # Window 0: nvim
     tmux new-session -d -s "$SESSION_NAME" -n nvim
     if [ "$IS_PYTHON_ENV" = true ]; then
-        tmux send-keys -t "$SESSION_NAME:0" "source .env/bin/activate" C-m
+        tmux send-keys -t "$SESSION_NAME:0" "source .venv/bin/activate" C-m
     fi
 
     if [ "$IS_NVIM_SESSION" = true ]; then
@@ -38,20 +38,20 @@ if [ $? != 0 ]; then
     # Window 1: term
     tmux new-window -t "$SESSION_NAME:1" -n term
     if [ "$IS_PYTHON_ENV" = true ]; then
-        tmux send-keys -t "$SESSION_NAME:1" "source .env/bin/activate" C-m
+        tmux send-keys -t "$SESSION_NAME:1" "source .venv/bin/activate" C-m
     fi
 
     # Window 2: git
     tmux new-window -t "$SESSION_NAME:2" -n git
     if [ "$IS_PYTHON_ENV" = true ]; then
-        tmux send-keys -t "$SESSION_NAME:2" "source .env/bin/activate" C-m
+        tmux send-keys -t "$SESSION_NAME:2" "source .venv/bin/activate" C-m
     fi
     tmux send-keys -t "$SESSION_NAME:2" "lazygit" C-m
 
     # Window 3: file manager
     tmux new-window -t "$SESSION_NAME:3" -n files
     if [ "$IS_PYTHON_ENV" = true ]; then
-        tmux send-keys -t "$SESSION_NAME:3" "source .env/bin/activate" C-m
+        tmux send-keys -t "$SESSION_NAME:3" "source .venv/bin/activate" C-m
     fi
     tmux send-keys -t "$SESSION_NAME:3" "y" C-m  # open yazi
 fi
