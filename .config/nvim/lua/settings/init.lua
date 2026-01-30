@@ -93,3 +93,9 @@ set_bg_preserve_fg("DiagnosticSignError", bg)
 set_bg_preserve_fg("DiagnosticSignWarn", bg)
 set_bg_preserve_fg("DiagnosticSignInfo", bg)
 set_bg_preserve_fg("DiagnosticSignHint", bg)
+
+-- change syntax highlighting of namespaces
+vim.api.nvim_set_hl(0, "@namespace", {
+    fg = "#d3869b",
+    italic = true,
+})
