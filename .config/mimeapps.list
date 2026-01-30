@@ -1,3 +1,5 @@
+# run update-desktop-database
+
 [Added Associations]
 application/json=nvim.desktop;
 application/pdf=okularApplication_pdf.desktop;firefox-esr.desktop;
@@ -10,31 +12,31 @@ image/jpeg=qimgv.desktop;display-im7.q16.desktop;
 image/png=qimgv.desktop;
 text/plain=nvim.desktop;
 video/x-matroska=mpv.desktop;org.bunkus.mkvtoolnix-gui.desktop;
-application/zip=xarchiver.desktop;
-application/x-zip-compressed=xarchiver.desktop;
-application/x-tar=xarchiver.desktop;
-application/x-7z-compressed=xarchiver.desktop;
-application/x-rar=xarchiver.desktop;
-application/x-archive=xarchiver.desktop;
-application/x-compressed-tar=xarchiver.desktop;
+application/zip=ark.desktop;
+application/x-zip-compressed=ark.desktop;
+application/x-tar=ark.desktop;
+application/x-7z-compressed=ark.desktop;
+application/x-rar=ark.desktop;
+application/x-archive=ark.desktop;
+application/x-compressed-tar=ark.desktop;
 
 [Default Applications]
-application/json=nvim.desktop
-application/pdf=okularApplication_pdf.desktop
-application/x-xbel=nvim.desktop
+application/json=nvim.desktop;
+application/pdf=okularApplication_pdf.desktop;
+application/x-xbel=nvim.desktop;
 audio/x-matroska=mpv.desktop;
-image/gif=qimgv.desktop
-image/jpeg=qimgv.desktop
-image/png=qimgv.desktop
-inode/directory=pcmanfm.desktop
-text/plain=nvim.desktop
-video/x-matroska=mpv.desktop;
-x-content/unix-software=pcmanfm-autorun-software.desktop
-x-directory/normal=pcmanfm.desktop
-application/zip=xarchiver.desktop
-application/x-zip-compressed=xarchiver.desktop
-application/x-tar=xarchiver.desktop
-application/x-7z-compressed=xarchiver.desktop
-application/x-rar=xarchiver.desktop
-application/x-archive=xarchiver.desktop
-application/x-compressed-tar=xarchiver.desktop
+image/gif=qimgv.desktop;
+image/jpeg=qimgv.desktop;
+image/png=qimgv.desktop;
+inode/directory=dolphin.desktop;
+text/plain=nvim.desktop;
+video/x-matroska=mpv.desktop;;
+x-content/unix-software=dolphin-autorun-software.desktop;
+x-directory/normal=dolphin.desktop;
+application/zip=ark.desktop;
+application/x-zip-compressed=ark.desktop;
+application/x-tar=ark.desktop;
+application/x-7z-compressed=ark.desktop;
+application/x-rar=ark.desktop;
+application/x-archive=ark.desktop;
+application/x-compressed-tar=ark.desktop;
