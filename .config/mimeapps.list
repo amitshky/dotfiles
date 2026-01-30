@@ -40,3 +40,6 @@ application/x-7z-compressed=ark.desktop;
 application/x-rar=ark.desktop;
 application/x-archive=ark.desktop;
 application/x-compressed-tar=ark.desktop;
+x-scheme-handler/http=firefox-esr.desktop
+x-scheme-handler/https=firefox-esr.desktop
+text/html=firefox-esr.desktop
