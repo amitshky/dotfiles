@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 
 rm -r $HOME/.cache/thumbnails/*
+rm -r $HOME/.cache/qimgv/thumbnails/*
 rm -r $HOME/.cache/ueberzugpp/*
-rm -r $HOME/.var/app/org.kde.dolphin/cache/thumbnails/*
 rm -r /tmp/yazi*
 
 rm $HOME/.local/share/recently-used.xbel
