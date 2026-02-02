@@ -13,7 +13,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 echo "install packages"
-sudo apt-get install -qq -y xorg neovim vim git build-essential libx11-dev libxft-dev libxinerama-dev libxcb1-dev libxcb-res0-dev libx11-xcb-dev libxcb-util-dev libxrandr-dev network-manager picom feh arandr pipewire pulseaudio unzip flatpak ntfs-3g wireplumber bluez playerctl brightnessctl tmux rfkill pass gnupg2 clang clang-tools clang-format clang-tidy nodejs npm python3-venv python3-pip python-is-python3 ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick pinentry-gtk2 pinentry-tty lua5.1 luarocks adwaita-icon-theme adwaita-icon-theme-legacy breeze-icon-theme lxappearance qt5ct qalc xclip libavcodec-extra breeze gnome-themes-extra btop firefox-esr pcmanfm keepassxc mpv qimgv lazygit gpick darktable copyq flameshot unclutter-xfixes pulsemixer syncthing dunst yt-dlp gallery-dl qbittorrent qalculate-qt okular calcurse libreoffice libreoffice-gtk3 krename valgrind mkvtoolnix mkvtoolnix-gui bear dolphin udisks2 kde-cli-tools polkit-kde-agent-1 stow cloc ark cmake
+sudo apt-get install -qq -y xorg neovim vim git build-essential libx11-dev libxft-dev libxinerama-dev libxcb1-dev libxcb-res0-dev libx11-xcb-dev libxcb-util-dev libxrandr-dev network-manager picom feh arandr pipewire pulseaudio unzip flatpak ntfs-3g wireplumber bluez playerctl brightnessctl tmux rfkill pass gnupg2 clang clang-tools clang-format clang-tidy nodejs npm python3-venv python3-pip python-is-python3 ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick pinentry-gtk2 pinentry-tty lua5.1 luarocks adwaita-icon-theme adwaita-icon-theme-legacy breeze-icon-theme lxappearance qt5ct qalc xclip libavcodec-extra breeze gnome-themes-extra btop firefox-esr pcmanfm keepassxc mpv qimgv lazygit gpick darktable copyq flameshot unclutter-xfixes pulsemixer syncthing dunst yt-dlp qbittorrent qalculate-qt okular calcurse libreoffice libreoffice-gtk3 krename valgrind mkvtoolnix mkvtoolnix-gui bear dolphin udisks2 kde-cli-tools polkit-kde-agent-1 stow cloc ark cmake
 
 # i think doing this in the previous command causes conflicts
 sudo apt-get install -qq -y pipewire-audio-client-libraries
@@ -60,6 +60,9 @@ curl -sL "http://ftp.uk.debian.org/debian/pool/contrib/t/torbrowser-launcher/tor
 sudo dpkg -i /tmp/gcm.deb /tmp/discord.deb
 # using apt to avoid vscode prompt and for some reason tor doesnt get installed using dpkg
 sudo apt-get install -qq -y /tmp/vscode.deb /tmp/tor.deb
+
+echo "install standalone executables"
+curl -sL "https://api.github.com/repos/mikf/gallery-dl/releases/latest" | grep browser_download_url | grep 'gallery-dl*\.bin' | cut -d '"' -f 4 | sudo xargs curl -sL -o /usr/local/bin/gallery-dl | sudo chmod +x /usr/local/bin/gallery-dl
 
 echo "install rust"
 # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
