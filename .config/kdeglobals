@@ -1,6 +1,9 @@
 [General]
 TerminalApplication=st
 
+[Icons]
+Theme=Breeze_Dark
+
 [KDE]
 ShowDeleteCommand=false
 
@@ -30,6 +33,3 @@ Dialog Size=600,480
 [PreviewSettings]
 EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
-
-[Icons]
-Theme=Breeze_Dark
