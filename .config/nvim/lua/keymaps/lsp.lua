@@ -32,15 +32,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
       '<cmd>lua vim.diagnostic.open_float({ border = "single" })<cr>',
       { desc = "Open diagnostics popup", buffer = args.buf })
 
-    if vim.bo.filetype == "cs" then
-      vim.keymap.set('n', '<leader>lL',
-        '<cmd>Roslyn restart<cr>',
-        { desc = "Restart LSP", buffer = args.buf })
-    else
-      vim.keymap.set('n', '<leader>lL',
-        '<cmd>LspRestart<cr>',
-        { desc = "Restart LSP", buffer = args.buf })
-    end
+    vim.keymap.set('n', '<leader>lL',
+      '<cmd>LspRestart<cr>',
+      { desc = "Restart LSP", buffer = args.buf })
 
     vim.keymap.set('n', '<leader>ls', '<cmd>Pick lsp scope="document_symbol"<cr>',
       { desc = "Document symbols", buffer = args.buf })
@@ -74,26 +68,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
       silent = true,
     })
 
-    -- List of filetypes to use conform
-    local conform_filetypes = {
-      javascript = true,
-      typescript = true,
-      json = true,
-      css = true,
-      html = true,
-      markdown = true,
-      angular = true,
-      htmlangular = true,
-    }
-
-    local ft = vim.bo.filetype;
-
+    -- code format
     vim.keymap.set('n', '<leader>lf', function()
-      if conform_filetypes[ft] then
-        require('conform').format({ bufnr = args.buf })
-      else
-        vim.lsp.buf.format({ bufnr = args.buf })
-      end
+      vim.lsp.buf.format({ bufnr = args.buf })
     end, { desc = "Format code", buffer = args.buf })
   end
 })

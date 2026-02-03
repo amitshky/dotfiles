@@ -18,4 +18,10 @@ require('lazy').setup({
     enabled = false,
     notify = true
   },
+  performance = {
+    rtp = {
+      -- don't reset vim runtime path, prevents lua requiring treesitter
+      reset = false,
+    },
+  },
 })

@@ -32,6 +32,7 @@ return {
     end,
   },
 
+  -- for mini lsp pickers
   {
     'nvim-mini/mini.extra',
     version = '*',

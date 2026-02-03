@@ -3,6 +3,8 @@ Neovim config file locations
 - linux: `~/.config/nvim/`
 - windows: `%USERPROFILE%/AppData/Local/nvim/`
 
+> **NOTE:** change `run_on_start` to `true` if you want to automatically install some LSP
+
 ## Pre-requisites
 - [Neovim (v0.11 or higher)](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 
@@ -11,7 +13,6 @@ LSPs that need to be installed (these can be installed through Mason too (which 
 - [luals](https://luals.github.io/#neovim-install)
 - [bashls](https://github.com/bash-lsp/bash-language-server)
 - [pylsp](https://github.com/python-lsp/python-lsp-server)
-- [roslyn](https://github.com/seblyng/roslyn.nvim)
 - [emmet_language_server](https://github.com/olrtg/emmet-language-server)
 - [html](https://github.com/microsoft/vscode-html-languageservice)
 - [vtsls](https://github.com/yioneko/vtsls)

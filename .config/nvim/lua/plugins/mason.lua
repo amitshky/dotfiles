@@ -28,14 +28,14 @@ return {
 
           -- Formatters
           -- "prettier", -- JS/TS/HTML/CSS/JSON/Markdown/YAML
-          "stylua",   -- Lua
-          "black",    -- Python
+          "stylua", -- Lua
+          "black",  -- Python
 
           -- Linters
           -- "eslint_d",
         },
-        auto_update = false, -- update installed tools automatically
-        run_on_start = true, -- check & install on startup
+        auto_update = false,  -- update installed tools automatically
+        run_on_start = false, -- check & install on startup
       })
     end,
   },
