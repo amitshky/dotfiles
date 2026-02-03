@@ -71,6 +71,18 @@
    </metadata>
   </info>
  </bookmark>
+ <bookmark href="file:///home/almostblue/downloads">
+  <title>Downloads</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-downloads"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1768914558/2</ID>
+    <isSystemItem>true</isSystemItem>
+   </metadata>
+  </info>
+ </bookmark>
  <bookmark href="file:///home/almostblue/music">
   <title>Music</title>
   <info>
@@ -181,16 +193,4 @@
    </metadata>
   </info>
  </separator>
- <bookmark href="file:///home/almostblue/downloads">
-  <title>Downloads</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="folder-downloads"/>
-   </metadata>
-   <metadata owner="http://www.kde.org">
-    <ID>1768914558/2</ID>
-    <isSystemItem>true</isSystemItem>
-   </metadata>
-  </info>
- </bookmark>
 </xbel>
