@@ -47,9 +47,6 @@ git restore .
 cd $PWD
 
 echo "install fonts"
-curl -sL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip -o /tmp/JetBrainsMono.zip
-mkdir -p $HOME/.fonts/JetBrainsMono/
-unzip /tmp/JetBrainsMono.zip -d $HOME/.fonts/JetBrainsMono/ 
 fc-cache
 
 echo "install programs from .deb"
