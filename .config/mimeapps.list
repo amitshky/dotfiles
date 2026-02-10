@@ -1,5 +1,3 @@
-# run update-desktop-database
-
 [Added Associations]
 application/json=nvim.desktop;
 application/pdf=okularApplication_pdf.desktop;firefox-esr.desktop;
@@ -19,6 +17,7 @@ application/x-7z-compressed=ark.desktop;
 application/x-rar=ark.desktop;
 application/x-archive=ark.desktop;
 application/x-compressed-tar=ark.desktop;
+application/octet-stream=org.kde.ark.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
