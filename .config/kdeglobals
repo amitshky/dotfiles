@@ -1,9 +1,6 @@
 [General]
 TerminalApplication=st
 
-[Icons]
-Theme=Breeze_Dark
-
 [KDE]
 ShowDeleteCommand=false
 
