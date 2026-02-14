@@ -101,3 +101,9 @@ cd $HOME/dev-not-mine/gf/
 ./build.sh
 sudo cp gf2 /usr/local/bin
 cd $PWD
+
+# change the scrolling direction of the touchpad
+# WARNING: you may have to change the name of the touchpad device id
+xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 318 1
+# enable tap to click
+xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 347 1

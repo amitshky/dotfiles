@@ -231,3 +231,15 @@ update-desktop-database $HOME/.local/share/applications/
 ```sh
 dpkg-reconfigure console-setup
 ```
+
+## Change touchpad scroll direction
+```sh
+xinput list
+
+# find the touchpad
+# change the name in the quotations below to be the name of your touchpad
+xinput list-props "ELAN0504:01 04F3:3091 Touchpad" | grep "Natural Scrolling Enabled"
+
+# 318 is the id of the "Natural Scrolling Enabled" property
+xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 318 1
+```
