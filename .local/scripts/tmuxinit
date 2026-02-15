@@ -19,6 +19,9 @@ IS_PYTHON_ENV=$([ -d .venv ] && echo true || echo false)
 # Check if nvim session file exists
 IS_NVIM_SESSION=$([ -e session.vim ] && echo true || echo false)
 
+# Check if .git exists
+IS_GIT_REPO=$([ -d .git ] && echo true || echo false)
+
 # Check if session already exists
 tmux has-session -t "$SESSION_NAME" 2>/dev/null
 
@@ -46,7 +49,9 @@ if [ $? != 0 ]; then
     if [ "$IS_PYTHON_ENV" = true ]; then
         tmux send-keys -t "$SESSION_NAME:2" "source .venv/bin/activate" C-m
     fi
-    tmux send-keys -t "$SESSION_NAME:2" "lazygit" C-m
+    if [ "$IS_GIT_REPO" = true ]; then
+        tmux send-keys -t "$SESSION_NAME:2" "lazygit" C-m
+    fi
 
     # Window 3: file manager
     tmux new-window -t "$SESSION_NAME:3" -n files
