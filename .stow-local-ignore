@@ -25,5 +25,8 @@ _darcs
 setup
 ublock
 .config/copyq/copyq_geometry.ini
+.config/copyq/copyq_geometry.ini.lock
+.config/copyq/copyq_geometry.ini.lock.rmlock
 .config/copyq/copyq_tabs.ini
+.config/qimgv/savedState.conf
 .config/btop/btop.log
