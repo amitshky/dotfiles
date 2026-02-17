@@ -1,6 +1,10 @@
-copyq-monitor.ini
-copyq.lock
-copyq.pub
-copyq_geometry.ini
-copyq_tabs.ini
+.config/copyq/copyq-monitor.ini
+.config/copyq/copyq.lock
+.config/copyq/copyq.pub
+.config/copyq/copyq_geometry.ini
+.config/copyq/copyq_geometry.ini.lock
+.config/copyq/copyq_geometry.ini.lock.rmlock
+.config/copyq/copyq_tabs.ini
+.config/qimgv/savedState.conf
+.config/btop/btop.log
 *.dat
