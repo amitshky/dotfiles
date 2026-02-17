@@ -136,12 +136,12 @@ alias l='ls -CF'
 
 alias lg="lazygit"
 alias ti="tmuxinit"
+alias qi="qimgv"
 alias n="nvim ."
 alias wd="cd ~/dev/"
 alias wc="cd ~/dotfiles/"
 alias wo="cd ~/documents/Obsidian/"
 alias wu="cd ~/documents/notes/"
-alias qi="qimgv"
 # alias cat="bat" # use \cat to override this alias and use the actual cat command
 
 alias cdwm="sudo make -C \"$HOME/suckless/dwm\" clean install"
