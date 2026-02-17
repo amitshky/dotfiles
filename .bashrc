@@ -107,7 +107,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:~/.cargo/bin/:/sbin/:~/.local/bin:~/.local/scripts/"
+export PATH="$PATH:~/.cargo/bin/:/sbin/:~/.local/bin:~/.local/scripts:"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -118,6 +118,7 @@ export BROWSER="firefox"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GPG_TTY=$(tty)
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export WEBOTS_HOME="/usr/local/webots"
 
 # customizing prompt
 git_branch_for_prompt() {

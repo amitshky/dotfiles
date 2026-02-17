@@ -3,11 +3,6 @@ use = "yazi-rs/plugins:smart-enter"
 rev = "7a9f5b1"
 hash = "7918aab6a71caf31b58411f789195677"
 
-[[plugin.deps]]
-use = "llanosrocas/yaziline"
-rev = "1342efe"
-hash = "a84a339953a568fee1d8beb63e6dca73"
-
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
 rev = "b4cc9f2"

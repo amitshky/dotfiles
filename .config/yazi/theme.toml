@@ -1,2 +1,31 @@
 [flavor]
 dark = "gruvbox-dark"
+
+[status]
+overall = { bg = "#262626" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[tabs]
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[indicator]
+padding = { open = "", close = "" }
+
+[filetype]
+rules = [
+    { url = "*/", is = "hidden", fg = "#5D6F68", bold = true },
+    { url = "*/", fg = "#83a598", bold = true },
+    { url = "*", is = "hidden", fg = "#918274" },
+    { url = "*", is = "exec",   fg = "#b8bb26" },
+]
+
+[icon]
+prepend_conds = [
+    { if = "hidden & dir",   text = "", fg = "#5D6F68" },
+    { if = "dir",            text = "", fg = "#82A497" },
+    { if = "exec",           text = "", fg = "#B4B726" },
+    { if = "hidden",         text = "", fg = "#918274" },
+    { if = "!(dir | link)",  text = "", fg = "#E2D3AC" },
+]
