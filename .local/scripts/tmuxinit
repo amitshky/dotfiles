@@ -10,7 +10,7 @@ if [ -n "$1" ]; then
     SESSION_NAME="$1"
 else
     DIR_NAME="$(basename "$PWD")"
-    SESSION_NAME="${DIR_NAME:0:5}"
+    SESSION_NAME="${DIR_NAME:0:8}"
 fi
 
 # Check if Python venv exists
@@ -54,11 +54,11 @@ if [ $? != 0 ]; then
     fi
 
     # Window 3: file manager
-    tmux new-window -t "$SESSION_NAME:3" -n files
-    if [ "$IS_PYTHON_ENV" = true ]; then
-        tmux send-keys -t "$SESSION_NAME:3" "source .venv/bin/activate" C-m
-    fi
-    tmux send-keys -t "$SESSION_NAME:3" "y" C-m  # open yazi
+    # tmux new-window -t "$SESSION_NAME:3" -n files
+    # if [ "$IS_PYTHON_ENV" = true ]; then
+    #     tmux send-keys -t "$SESSION_NAME:3" "source .venv/bin/activate" C-m
+    # fi
+    # tmux send-keys -t "$SESSION_NAME:3" "y" C-m  # open yazi
 fi
 
 # Always start in first window
