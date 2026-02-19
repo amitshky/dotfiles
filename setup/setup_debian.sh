@@ -76,7 +76,7 @@ cargo install --force yazi-build
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "install flatpak packages"
-sudo flatpak install -y app/md.obsidian.Obsidian/x86_64/stable com.protonvpn.ww 
+sudo flatpak install -y app/md.obsidian.Obsidian/x86_64/stable com.protonvpn.ww app/org.localsend.localsend_app/x86_64/stable 
 
 echo "install nvidia drivers"
 sudo apt-get install -qq -y linux-headers-amd64 nvidia-kernel-dkms nvidia-driver
