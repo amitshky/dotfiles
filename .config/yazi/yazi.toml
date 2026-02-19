@@ -1,6 +1,7 @@
 [mgr]
 show_hidden = true
 sort_by = "natural"
+linemode = "all"
 
 [tasks]
 image_bound = [0, 0]
