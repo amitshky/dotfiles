@@ -7,4 +7,5 @@
 .config/copyq/copyq_tabs.ini
 .config/qimgv/savedState.conf
 .config/btop/btop.log
+.config/qBittorrent/qBittorrent-data.conf
 *.dat

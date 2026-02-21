@@ -17,8 +17,8 @@ padding = { open = "", close = "" }
 rules = [
     { url = "*/", is = "hidden", fg = "#5D6F68", bold = true },
     { url = "*/", fg = "#83a598", bold = true },
-    { url = "*", is = "hidden", fg = "#918274" },
     { url = "*", is = "exec",   fg = "#b8bb26" },
+    { url = "*", is = "hidden", fg = "#918274" },
 ]
 
 [icon]
