@@ -23,4 +23,5 @@ xset -dpms # disable display power management signal
 
 xrdb ~/.Xresources
 
-exec dwm
+# exec dwm
+exec dbus-run-session dwm
