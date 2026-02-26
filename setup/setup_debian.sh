@@ -107,4 +107,5 @@ cd $PWD
 # WARNING: you may have to change the name of the touchpad device id
 xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 318 1
 # enable tap to click
+xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 345 1
 xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 347 1
