@@ -99,3 +99,12 @@ vim.api.nvim_set_hl(0, "@namespace", {
     fg = "#d3869b",
     italic = true,
 })
+
+-- change c comments to //
+vim.api.nvim_create_autocmd('Filetype', {
+    pattern = 'c',
+    callback = function()
+        vim.bo.commentstring = '// %s'
+    end,
+    group = comment_augroup
+})
