@@ -19,7 +19,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.updatetime = 250 -- decrease update time
 vim.o.timeoutlen = 400 -- timeout for next key press
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = "menuone"
 vim.o.termguicolors = true
 vim.o.list = true
 vim.o.listchars = "tab:→→,space:∙"
@@ -69,3 +69,12 @@ vim.keymap.set('v', '<A-k>', ":m '<-2<cr>gv-gv")
 -- vim.keymap.set('n', '<', '<cmd><<cr>')
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+
+-- change c comments to //
+vim.api.nvim_create_autocmd('Filetype', {
+    pattern = 'c',
+    callback = function()
+        vim.bo.commentstring = '// %s'
+    end,
+    group = comment_augroup
+})
