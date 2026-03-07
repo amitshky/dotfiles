@@ -19,6 +19,7 @@ image/gif=qimgv.desktop;
 image/jpeg=qimgv.desktop;display-im7.q16.desktop;
 image/png=qimgv.desktop;
 text/plain=nvim.desktop;
+video/mp4=mpv.desktop;vlc.desktop;org.kde.ark.desktop;
 video/x-matroska=mpv.desktop;org.bunkus.mkvtoolnix-gui.desktop;
 
 [Default Applications]
@@ -41,6 +42,7 @@ image/png=qimgv.desktop;
 inode/directory=dolphin.desktop;
 text/html=firefox-esr.desktop
 text/plain=nvim.desktop;
+video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;;
 x-content/unix-software=dolphin-autorun-software.desktop;
 x-directory/normal=dolphin.desktop;

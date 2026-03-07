@@ -39,12 +39,33 @@ vim.o.laststatus = 3
 vim.o.showtabline = 0
 vim.o.winbar = "%f %m"
 
+-- colorscheme
+vim.cmd.colorscheme("habamax")
+
 -- keymaps
 vim.keymap.set({ 'n', 'v' }, '<space>', '<nop>')
 vim.keymap.set({ 'i', 'c' }, 'jk', '<esc>')
+vim.keymap.set('n', '<leader>q', '<cmd>q<cr>', { desc = "Quit" })
+vim.keymap.set('n', '<leader>Q', '<cmd>qa<cr>', { desc = "Quit all" })
+vim.keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = "Save" })
+vim.keymap.set('n', '<leader>W', '<cmd>wa<cr>', { desc = "Save all" })
+vim.keymap.set({ 'n', 'v' }, 'U', '<C-r>')
+vim.keymap.set({ 'n', 'v' }, '<C-r>', '<U>')
 -- remove search highlights
 vim.keymap.set('n', '<leader>h', '<cmd>nohl<cr>', { desc = "Remove search highlights" })
 -- buffers
 vim.keymap.set('n', '<S-h>', '<cmd>bp<cr>', { desc = "Prev Buffer" }) -- prev buffer
 vim.keymap.set('n', '<S-l>', '<cmd>bn<cr>', { desc = "Next Buffer" }) -- next buffer
 vim.keymap.set('n', '<leader>o', '<C-6>', { desc = "Jump to recently used buffer" })
+-- move line/s
+vim.keymap.set('i', '<A-j>', '<esc>:m .+1<cr>==gi')
+vim.keymap.set('i', '<A-k>', '<esc>:m .-2<cr>==gi')
+vim.keymap.set('n', '<A-j>', '<esc>:m .+1<cr>==')
+vim.keymap.set('n', '<A-k>', '<esc>:m .-2<cr>==')
+vim.keymap.set('v', '<A-j>', ":m '>+1<cr>gv-gv")
+vim.keymap.set('v', '<A-k>', ":m '<-2<cr>gv-gv")
+-- indentation
+-- vim.keymap.set('n', '>', '<cmd>><cr>')
+-- vim.keymap.set('n', '<', '<cmd><<cr>')
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
