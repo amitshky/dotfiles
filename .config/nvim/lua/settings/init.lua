@@ -41,20 +41,6 @@ vim.o.winbar = "%f %m"
 -- colorscheme
 vim.cmd.colorscheme("gruvbox")
 
--- Active buffer
-vim.api.nvim_set_hl(0, "WinBar", {
-    fg = "#FABD2F", -- text color
-    bg = "#202020", -- inactive background
-})
--- Inactive buffer
-vim.api.nvim_set_hl(0, "WinBarNC", {
-    fg = "#928374", -- text color for inactive
-    bg = "#202020", -- inactive background
-})
-
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#181818" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#151515" })
-
 -- override oil.nvim colors
 vim.api.nvim_set_hl(0, "OilDir", { fg = "#83A598" })
 
@@ -75,30 +61,6 @@ vim.lsp.handlers["textDocument/signatureHelp"] =
         border = "single",
         silent = true,
     })
-
--- change color of the signcolumn
-local function set_bg_preserve_fg(group, bg)
-    local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
-    if not hl then
-        return
-    end
-    hl.bg = bg
-    vim.api.nvim_set_hl(0, group, hl)
-end
--- change the bg but preserve the fg
-local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
-local bg = normal.bg
-set_bg_preserve_fg("SignColumn", bg)
-set_bg_preserve_fg("DiagnosticSignError", bg)
-set_bg_preserve_fg("DiagnosticSignWarn", bg)
-set_bg_preserve_fg("DiagnosticSignInfo", bg)
-set_bg_preserve_fg("DiagnosticSignHint", bg)
-
--- change syntax highlighting of namespaces
-vim.api.nvim_set_hl(0, "@namespace", {
-    fg = "#d3869b",
-    italic = true,
-})
 
 -- change c comments to //
 vim.api.nvim_create_autocmd('Filetype', {

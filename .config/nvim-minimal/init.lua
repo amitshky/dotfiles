@@ -69,6 +69,9 @@ vim.keymap.set('v', '<A-k>', ":m '<-2<cr>gv-gv")
 -- vim.keymap.set('n', '<', '<cmd><<cr>')
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+-- copy/paste to system clipboard
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>p', '"+p')
 
 -- change c comments to //
 vim.api.nvim_create_autocmd('Filetype', {
