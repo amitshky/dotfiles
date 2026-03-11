@@ -17,8 +17,8 @@ vim.o.scrolloff = 0
 vim.o.hlsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.updatetime = 250 -- decrease update time
-vim.o.timeoutlen = 400 -- timeout for next key press
+-- vim.o.updatetime = 250 -- decrease update time
+-- vim.o.timeoutlen = 400 -- timeout for next key press
 vim.o.completeopt = "menuone"
 vim.o.termguicolors = true
 vim.o.list = true
@@ -71,7 +71,10 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 -- copy/paste to/from system clipboard
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>Y', '"+Y')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>p', '"+p')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>P', '"+P')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d')
 
 -- change c comments to //
 vim.api.nvim_create_autocmd('Filetype', {
