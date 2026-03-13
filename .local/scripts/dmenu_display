@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+selected=$(
+    {
+        printf "Laptop Display\nSecond Display\nDuplicate\n"
+    } | dmenu -c -z 500 -l 8 -p "display:"
+)
+
+case "$selected" in
+    "Laptop Display") laptop_display ;;
+    "Second Display") second_display ;;
+    "Duplicate")      duplicate_display ;;
+esac
