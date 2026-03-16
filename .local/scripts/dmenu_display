@@ -3,6 +3,8 @@
 selected=$(
     {
         printf "Laptop Display\nSecond Display\nDuplicate\n"
+        printf "Dual Display (Right) (primary: HDMI)\n"
+        printf "Dual Display (Left) (primary: HDMI)\n"
     } | dmenu -c -z 500 -l 8 -p "display:"
 )
 
@@ -10,4 +12,6 @@ case "$selected" in
     "Laptop Display") laptop_display ;;
     "Second Display") second_display ;;
     "Duplicate")      duplicate_display ;;
+    "Dual Display (Right) (primary: HDMI)") dual_right_display;;
+    "Dual Display (Left) (primary: HDMI)")  dual_left_display;;
 esac
