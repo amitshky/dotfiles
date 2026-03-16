@@ -5,7 +5,7 @@ selected=$(
         printf "Laptop Display\nSecond Display\nDuplicate\n"
         printf "Dual Display (Right) (primary: HDMI)\n"
         printf "Dual Display (Left) (primary: HDMI)\n"
-    } | dmenu -c -z 500 -l 8 -p "display:"
+    } | dmenu -c -i -z 500 -l 8 -p "display:"
 )
 
 case "$selected" in
