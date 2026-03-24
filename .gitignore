@@ -8,4 +8,5 @@
 .config/qimgv/savedState.conf
 .config/btop/btop.log
 .config/qBittorrent/qBittorrent-data.conf
+.config/copyq/copyq_geometry.ini.FepiWZ
 *.dat
