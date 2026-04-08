@@ -243,3 +243,13 @@ xinput list-props "ELAN0504:01 04F3:3091 Touchpad" | grep "Natural Scrolling Ena
 # 318 is the id of the "Natural Scrolling Enabled" property
 xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 318 1
 ```
+
+## To prevent laptop from suspending when closing lid
+```
+sudo nvim /etc/systemd/logind.conf
+
+# then change these lines and uncomment them:
+
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+```
