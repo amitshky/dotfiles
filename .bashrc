@@ -143,7 +143,7 @@ alias m="NVIM_APPNAME=nvim-minimal nvim ."
 alias mvim="NVIM_APPNAME=nvim-minimal nvim"
 alias wd="cd ~/dev/"
 alias wc="cd ~/dotfiles/"
-alias wo="cd ~/documents/Obsidian/"
+alias wo="cd ~/sync/ObsidianVault/"
 alias wu="cd ~/documents/notes/"
 # alias cat="bat" # use \cat to override this alias and use the actual cat command
 
