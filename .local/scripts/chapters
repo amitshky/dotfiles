@@ -1,0 +1,60 @@
+#! /usr/bin/python3
+
+# returns a txt file from the names of all the .wav files in the directory
+# in mkv chapters file format
+
+import os
+import subprocess
+
+OUTPUT_FILE = "chapters.txt"
+
+# extensions you want to include
+FILE_EXTENSIONS = (".wav", ".mp4", ".mka", ".mp3")
+
+
+def get_media_duration_seconds(filepath):
+    """Get duration using ffprobe"""
+    cmd = [
+        "ffprobe",
+        "-v", "error",
+        "-show_entries", "format=duration",
+        "-of", "default=noprint_wrappers=1:nokey=1",
+        filepath
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    return float(result.stdout.strip())
+
+
+def format_timestamp(total_seconds):
+    hours = int(total_seconds // 3600)
+    minutes = int((total_seconds % 3600) // 60)
+    seconds = total_seconds % 60
+    return f"{hours:02d}:{minutes:02d}:{seconds:06.3f}"
+
+
+def main():
+    media_files = sorted(
+        f for f in os.listdir(".")
+        if f.lower().endswith(FILE_EXTENSIONS)
+    )
+
+    current_time = 0.0
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as out:
+        for idx, media_file in enumerate(media_files, start=1):
+            chapter_num = f"{idx:02d}"
+            chapter_name = os.path.splitext(media_file)[0]
+
+            timestamp = format_timestamp(current_time)
+
+            out.write(f"CHAPTER{chapter_num}={timestamp}\n")
+            out.write(f"CHAPTER{chapter_num}NAME={chapter_name}\n")
+
+            duration = get_media_duration_seconds(media_file)
+            current_time += duration
+
+    print(f"Matroska chapter file written to {OUTPUT_FILE}")
+
+
+if __name__ == "__main__":
+    main()
