@@ -253,3 +253,14 @@ sudo nvim /etc/systemd/logind.conf
 HandleLidSwitch=ignore
 HandleLidSwitchExternalPower=ignore
 ```
+
+## when laptop is idle 
+> WARNING! for some reason, this will suspend the laptop after the specified duration even if it is not idle.
+```
+sudo nvim /etc/systemd/logind.conf
+
+# then change these lines and uncomment them:
+
+IdleAction=suspend
+IdleActionSec=20min
+```

@@ -131,7 +131,7 @@ PROMPT_CLEAR_COLOR='\[\033[0m\]'
 PS1="${PROMPT_PURPLE}[ \\w]${PROMPT_GREEN}( \$(git_branch_for_prompt))\\n\\$ ${PROMPT_CLEAR_COLOR}"
 
 # some more ls aliases
-alias ll='ls -al'
+alias ll='ls -alh'
 alias la='ls -A'
 alias l='ls -CF'
 
