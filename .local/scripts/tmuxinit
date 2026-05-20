@@ -54,11 +54,11 @@ if [ $? != 0 ]; then
     fi
 
     # Window 3: file manager
-    # tmux new-window -t "$SESSION_NAME:3" -n files
-    # if [ "$IS_PYTHON_ENV" = true ]; then
-    #     tmux send-keys -t "$SESSION_NAME:3" "source .venv/bin/activate" C-m
-    # fi
-    # tmux send-keys -t "$SESSION_NAME:3" "y" C-m  # open yazi
+    tmux new-window -t "$SESSION_NAME:3" -n files
+    if [ "$IS_PYTHON_ENV" = true ]; then
+        tmux send-keys -t "$SESSION_NAME:3" "source .venv/bin/activate" C-m
+    fi
+    tmux send-keys -t "$SESSION_NAME:3" "y" C-m  # open yazi
 fi
 
 # Always start in first window
