@@ -107,7 +107,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:~/.cargo/bin/:/sbin/:~/.local/bin:~/.local/scripts:"
+export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/scripts:$HOME/programs/arduino-ide_2.3.8_Linux_64bit/"
 
 export EDITOR="nvim"
 export VISUAL="nvim"

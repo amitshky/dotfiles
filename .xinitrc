@@ -12,7 +12,7 @@ dunst &
 # for dolphin
 /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
-use_external_monitor &
+dual_right_display &
 volume_signal &
 brightness_signal &
 battery_signal &
