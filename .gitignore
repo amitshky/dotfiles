@@ -10,4 +10,5 @@
 .config/copyq/copyq_geometry.ini.lock.rmlock
 .config/copyq/copyq_tabs.ini
 .config/qBittorrent/qBittorrent-data.conf
+.config/qBittorrent/qBittorrent.conf
 .config/qimgv/savedState.conf
