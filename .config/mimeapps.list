@@ -23,6 +23,7 @@ image/webp=qimgv.desktop;org.darktable.darktable.desktop;okularApplication_kimgi
 text/plain=nvim.desktop;
 video/mp2t=mpv.desktop;vlc.desktop;org.kde.ark.desktop;
 video/mp4=mpv.desktop;vlc.desktop;org.kde.ark.desktop;
+video/webm=mpv.desktop;vlc.desktop;org.bunkus.mkvtoolnix-gui.desktop;qimgv.desktop;org.kde.ark.desktop;
 video/x-matroska=mpv.desktop;org.bunkus.mkvtoolnix-gui.desktop;
 
 [Default Applications]
@@ -49,6 +50,7 @@ text/html=firefox-esr.desktop
 text/plain=nvim.desktop;
 video/mp2t=mpv.desktop;
 video/mp4=mpv.desktop;
+video/webm=mpv.desktop;
 video/x-matroska=mpv.desktop;;
 x-content/unix-software=dolphin-autorun-software.desktop;
 x-directory/normal=dolphin.desktop;

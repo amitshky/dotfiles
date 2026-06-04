@@ -137,6 +137,7 @@ alias l='ls -CF'
 
 alias lg="lazygit"
 alias ti="tmuxinit"
+alias t="tmux"
 alias qi="qimgv"
 alias n="nvim ."
 alias m="NVIM_APPNAME=nvim-minimal nvim ."
@@ -168,3 +169,7 @@ function y() {
 # GRC (Generic Colorizer)
 GRC_ALIASES=true
 [[ -s "/etc/profile.d/grc.sh" ]] && source /etc/profile.d/grc.sh
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/almostblue/.local/bin:$PATH"

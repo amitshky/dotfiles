@@ -5,7 +5,7 @@ flatpak_apps=$(flatpak list --app --columns=application)
 
 selected=$(
     {
-        printf "Spotify\nPrivate\n"
+        printf "Spotify\nPrivate\nWhatsapp (NTC)\nWhatsapp (UK)\n"
         flatpak list --app --columns=application
         dmenu_path
     } | dmenu -i -c -z 800 -l 8 -p "run:"
@@ -16,9 +16,11 @@ if [[ -n "$selected" ]]; then
         flatpak run "$selected" &
     else
         case "$selected" in
-            Spotify)    firefox --new-window open.spotify.com ;;
-            Private)    firefox --private-window ;;
-            *)          $selected &>/dev/null & ;;
+            Spotify)          firefox --new-window open.spotify.com ;;
+            Private)          firefox --private-window ;;
+            "Whatsapp (NTC)") flatpak run com.google.Chrome web.whatsapp.com ;;
+            "Whatsapp (UK)")  firefox --new-window web.whatsapp.com ;;
+            *)                $selected &>/dev/null & ;;
         esac
     fi
 fi

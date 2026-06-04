@@ -1,11 +1,11 @@
 *.dat
 .config/btop/btop.log
 .config/copyq/copyq-monitor.ini
-.config/copyq/copyq-monitor.ini.CMPkOR
+.config/copyq/copyq-monitor.ini.*
 .config/copyq/copyq.lock
 .config/copyq/copyq.pub
 .config/copyq/copyq_geometry.ini
-.config/copyq/copyq_geometry.ini.FepiWZ
+.config/copyq/copyq_geometry.ini.*
 .config/copyq/copyq_geometry.ini.lock
 .config/copyq/copyq_geometry.ini.lock.rmlock
 .config/copyq/copyq_tabs.ini

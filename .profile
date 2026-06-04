@@ -28,3 +28,7 @@ fi
 . "$HOME/.cargo/env"
 
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/almostblue/.local/bin:$PATH"
