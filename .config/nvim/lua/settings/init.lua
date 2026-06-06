@@ -37,6 +37,7 @@ vim.o.signcolumn = "yes" -- show/hide a column for error, warning signs; "no", "
 vim.o.laststatus = 3
 vim.o.showtabline = 0
 vim.o.winbar = "%f %m"
+vim.o.colorcolumn = "80"
 
 -- colorscheme
 vim.cmd.colorscheme("gruvbox")

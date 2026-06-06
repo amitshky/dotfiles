@@ -15,6 +15,7 @@ vim.o.linebreak = true
 vim.o.scrolloff = 0
 -- vim.o.clipboard = "unnamedplus" -- copy to system clipboard
 vim.o.hlsearch = true
+vim.o.wildignorecase = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 -- vim.o.updatetime = 250 -- decrease update time
@@ -38,6 +39,7 @@ vim.o.signcolumn = "yes" -- show/hide a column for error, warning signs; "no", "
 vim.o.laststatus = 3
 vim.o.showtabline = 0
 vim.o.winbar = "%f %m"
+vim.o.colorcolumn = "80"
 
 -- colorscheme
 vim.cmd.colorscheme("habamax")
@@ -75,6 +77,8 @@ vim.keymap.set({ 'n', 'v', 'x' }, '<leader>Y', '"+Y')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>p', '"+p')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>P', '"+P')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d')
+-- find files
+vim.keymap.set({ 'n' }, '<leader>f', ':find ')
 
 -- change c comments to //
 vim.api.nvim_create_autocmd('Filetype', {
