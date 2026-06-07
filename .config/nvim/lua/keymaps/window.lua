@@ -1,6 +1,4 @@
 -- split window
-vim.keymap.set('n', '<leader>\\\\', '<C-w>v', { desc = "Vertically" })
-vim.keymap.set('n', '<leader>\\|', '<C-w>s', { desc = "Horizontally" })
 vim.keymap.set('n', '<leader>a\\', '<C-w>v', { desc = "Vertically" })
 vim.keymap.set('n', '<leader>a|', '<C-w>s', { desc = "Horizontally" })
 -- navigate windows

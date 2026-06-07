@@ -66,10 +66,19 @@ vim.keymap.set('n', '<leader>o', '<C-6>', { desc = "Jump to recently used buffer
 vim.keymap.set('n', '<leader>x', '<cmd>bd<cr>', { desc = "Close current buffer" })
 
 -- tabs
-vim.keymap.set('n', '<leader>Tn', '<cmd>tabnew<cr>', { desc = "New Tab" })
-vim.keymap.set('n', '<leader>Tx', '<cmd>tabclose<cr>', { desc = "Close Tab" })
 vim.keymap.set('n', '<M-h>', '<cmd>tabprevious<cr>', { desc = "Prev Tab" })
 vim.keymap.set('n', '<M-l>', '<cmd>tabnext<cr>', { desc = "Next Tab" })
+vim.keymap.set('n', '<leader>tn', '<cmd>tabnew<cr>', { desc = "New Tab" })
+vim.keymap.set('n', '<leader>tx', '<cmd>tabclose<cr>', { desc = "Close Tab" })
+vim.keymap.set('n', '<leader>t1', '1gt', { desc = "Swtich to Tab 1" })
+vim.keymap.set('n', '<leader>t2', '2gt', { desc = "Swtich to Tab 2" })
+vim.keymap.set('n', '<leader>t3', '3gt', { desc = "Swtich to Tab 3" })
+vim.keymap.set('n', '<leader>t4', '4gt', { desc = "Swtich to Tab 4" })
+vim.keymap.set('n', '<leader>t5', '5gt', { desc = "Swtich to Tab 5" })
+vim.keymap.set('n', '<leader>t6', '6gt', { desc = "Swtich to Tab 6" })
+vim.keymap.set('n', '<leader>t7', '7gt', { desc = "Swtich to Tab 7" })
+vim.keymap.set('n', '<leader>t8', '8gt', { desc = "Swtich to Tab 8" })
+vim.keymap.set('n', '<leader>t9', '9gt', { desc = "Swtich to Tab 9" })
 
 -- remove search highlights
 vim.keymap.set('n', '<leader>h', '<cmd>nohl<cr>', { desc = "Remove search highlights" })
