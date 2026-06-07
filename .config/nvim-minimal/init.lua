@@ -79,6 +79,8 @@ vim.keymap.set({ 'n', 'v', 'x' }, '<leader>P', '"+P')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d')
 -- find files
 vim.keymap.set({ 'n' }, '<leader>f', ':find ')
+-- Explorer (netrw)
+vim.keymap.set({ 'n' }, '<leader>e', '<cmd>Explore<cr> ')
 
 -- change c comments to //
 vim.api.nvim_create_autocmd('Filetype', {

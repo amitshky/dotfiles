@@ -36,8 +36,27 @@ vim.o.path = vim.o.path .. "**"
 vim.o.signcolumn = "yes" -- show/hide a column for error, warning signs; "no", "yes", "yes:<width>" eg: "yes:1"
 vim.o.laststatus = 3
 vim.o.showtabline = 0
-vim.o.winbar = "%f %m"
 vim.o.colorcolumn = "80"
+
+-- winbar with tab number and file icon
+local devicons = require("nvim-web-devicons")
+_G.winbar = function()
+    local filename = vim.fn.expand("%:t")
+    local ext = vim.fn.expand("%:e")
+    local icon = ""
+    if filename ~= "" then
+        icon = select(1, devicons.get_icon(filename, ext, { default = true })) or ""
+    end
+    return string.format(
+        "[%d] %s %s %s",
+        vim.fn.tabpagenr(),
+        icon,
+        "%f", -- filename
+        "%m"  -- modified
+    )
+end
+vim.o.winbar = "%{%v:lua.winbar()%}"
+-- vim.o.winbar = "%f %m" -- simple winbar
 
 -- colorscheme
 vim.cmd.colorscheme("gruvbox")

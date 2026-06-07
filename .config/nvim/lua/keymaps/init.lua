@@ -66,8 +66,9 @@ vim.keymap.set('n', '<leader>o', '<C-6>', { desc = "Jump to recently used buffer
 vim.keymap.set('n', '<leader>x', '<cmd>bd<cr>', { desc = "Close current buffer" })
 
 -- tabs
+vim.keymap.set('n', '<leader>T', '<cmd>tabnew<cr>', { desc = "New Tab" })
 vim.keymap.set('n', '<M-h>', '<cmd>tabprevious<cr>', { desc = "Prev Tab" })
-vim.keymap.set('n', '<M-l>', '<cmd>tabNext<cr>', { desc = "Next Tab" })
+vim.keymap.set('n', '<M-l>', '<cmd>tabnext<cr>', { desc = "Next Tab" })
 
 -- remove search highlights
 vim.keymap.set('n', '<leader>h', '<cmd>nohl<cr>', { desc = "Remove search highlights" })
