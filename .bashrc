@@ -124,7 +124,6 @@ export WEBOTS_HOME="/usr/local/webots"
 git_branch_for_prompt() {
     git rev-parse --abbrev-ref HEAD 2>/dev/null
 }
-
 PROMPT_BLUE='\[\033[0;34m\]'
 PROMPT_PURPLE='\[\033[0;35m'
 PROMPT_GREEN='\[\033[0;32m'
