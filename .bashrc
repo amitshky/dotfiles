@@ -125,10 +125,11 @@ git_branch_for_prompt() {
     git rev-parse --abbrev-ref HEAD 2>/dev/null
 }
 
+PROMPT_BLUE='\[\033[0;34m\]'
 PROMPT_PURPLE='\[\033[0;35m'
 PROMPT_GREEN='\[\033[0;32m'
 PROMPT_CLEAR_COLOR='\[\033[0m\]'
-PS1="${PROMPT_PURPLE}[ \\w]${PROMPT_GREEN}( \$(git_branch_for_prompt))\\n\\$ ${PROMPT_CLEAR_COLOR}"
+PS1="${PROMPT_BLUE}{ \u@\h}${PROMPT_PURPLE}[ \\w]${PROMPT_GREEN}( \$(git_branch_for_prompt))\\n\\$ ${PROMPT_CLEAR_COLOR}"
 
 # some more ls aliases
 alias ll='ls -alh'

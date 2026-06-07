@@ -48,8 +48,9 @@ _G.winbar = function()
         icon = select(1, devicons.get_icon(filename, ext, { default = true })) or ""
     end
     return string.format(
-        "[%d] %s %s %s",
+        "[%d/%d] %s %s %s",
         vim.fn.tabpagenr(),
+        vim.fn.tabpagenr('$'),
         icon,
         "%f", -- filename
         "%m"  -- modified
