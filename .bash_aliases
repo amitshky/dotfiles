@@ -27,5 +27,6 @@ alias cdwm="sudo make -C \"$HOME/.local/src/dwm\" clean install"
 alias cst="sudo make -C \"$HOME/.local/src/st\" clean install"
 alias cdm="sudo make -C \"$HOME/.local/src/dmenu\" clean install"
 alias cdb="sudo make -C \"$HOME/.local/src/dwmblocks-async\" clean install"
-alias csl="sudo make -C \"$HOME/.local/src/slock\" clean install"
+# alias csl="sudo make -C \"$HOME/.local/src/slock\" clean install"
+alias csl=""
 alias csall="cdwm && cdm && cdb && cst && csl" # compile all suckless tools
