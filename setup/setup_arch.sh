@@ -2,6 +2,7 @@
 
 echo "installing packages"
 sudo pacman -S --needed \
+    7zip \
     adwaita-icon-theme \
     arandr \
     ark \
@@ -20,6 +21,7 @@ sudo pacman -S --needed \
     cloc \
     cmake \
     copyq \
+    darktable \
     discord \
     dolphin \
     dunst \
@@ -34,6 +36,9 @@ sudo pacman -S --needed \
     git \
     gnome-themes-extra \
     gnupg \
+    gpick \
+    htop \
+    imagemagick \
     imagemagick \
     jq \
     kde-cli-tools \
@@ -49,6 +54,7 @@ sudo pacman -S --needed \
     lxappearance \
     man-db \
     man-pages \
+    mkvtoolnix-gui \
     mpv \
     nano \
     neovim \
@@ -61,7 +67,6 @@ sudo pacman -S --needed \
     okular \
     pass \
     pavucontrol \
-    pcmanfm \
     picom \
     pinentry \
     pipewire \
@@ -75,16 +80,19 @@ sudo pacman -S --needed \
     qalc \
     qbittorrent \
     qt5ct \
+    resvg \
     rfkill \
     ripgrep \
     stow \
     syncthing \
+    terminus-font \
     texinfo \
     tmux \
     torbrowser-launcher \
     ttf-dejavu \
     udisks2 \
     ueberzugpp \
+    unclutter \
     unzip \
     valgrind \
     vim \
@@ -106,6 +114,7 @@ sudo pacman -S --needed \
     xorg-xrdb \
     xorg-xset \
     xorg-xsetroot \
+    yazi \
     zoxide
 
 echo "install rust"
@@ -127,13 +136,31 @@ git clone https://amitshky@github.com/amitshky/dwmblocks-async \
     "$HOME/.local/src/dwmblocks-async"
 git clone https://amitshky@github.com/amitshky/slock "$HOME/.local/src/slock"
 
+
 # install other programs
-echo "install gf2"
+
+echo "installing yay"
+git clone https://aur.archlinux.org/yay.git "$HOME/dev-not-mine/yay" 
+cd "$HOME/dev-not-mine/yay"
+makepkg -si
+cd $PWD
+rm -rf "$HOME/dev-not-mine/yay"
+
+echo "installing flatpak packages"
+flatpak install -y app/md.obsidian.Obsidian/x86_64/stable com.protonvpn.ww app/org.localsend.localsend_app/x86_64/stable 
+
+echo "installing gf2"
 git clone git@github.com:nakst/gf.git ~/dev-not-mine/gf
 cd $HOME/dev-not-mine/gf/
 ./build.sh
 sudo cp gf2 /usr/local/bin
 cd $PWD
+
+echo "installing from AUR"
+yay visual-studio-code-bin qimgv
+
+
+# other configurations
 
 echo "copying configs"
 cd $SCRIPT_DIR/..
@@ -144,13 +171,16 @@ cd $PWD
 echo "installing fonts"
 fc-cache
 
-# other configurations
-
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
 systemctl --user enable --now pipewire.socket pipewire-pulse.socket \
     wireplumber.service
 systemctl --user start pipewire pipewire-pulse wireplumber
+
+sudo printf "\n%s\n"\
+"NTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org" \
+"FallbackNTP=0.pool.ntp.org 1.pool.ntp.org 0.fr.pool.ntp.org" >> /etc/systemd/timesyncd.conf
+timedatectl set-ntp true
 
 # speeds up boot-time
 sudo systemctl disable NetworkManager-wait-online.service

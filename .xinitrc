@@ -1,5 +1,11 @@
 #! /usr/bin/env bash
 
+# load user environment
+[ -f ~/.xprofile ] && . ~/.xprofile
+
+# optional system-wide xprofile
+[ -f /etc/xprofile ] && . /etc/xprofile
+
 feh --bg-fill $HOME/dotfiles/setup/wallpaper.jpg
 picom -b
 
