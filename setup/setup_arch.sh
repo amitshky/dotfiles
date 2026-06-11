@@ -174,7 +174,6 @@ fc-cache
 
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
-systemctl --user enable --now ssh-agent.service
 systemctl --user enable --now pipewire.socket pipewire-pulse.socket \
     wireplumber.service
 systemctl --user start pipewire pipewire-pulse wireplumber
