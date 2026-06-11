@@ -41,20 +41,20 @@ vim.o.colorcolumn = "80"
 -- winbar with tab number and file icon
 local devicons = require("nvim-web-devicons")
 _G.winbar = function()
-    local filename = vim.fn.expand("%:t")
-    local ext = vim.fn.expand("%:e")
-    local icon = ""
-    if filename ~= "" then
-        icon = select(1, devicons.get_icon(filename, ext, { default = true })) or ""
-    end
-    return string.format(
-        "[%d/%d] %s %s %s",
-        vim.fn.tabpagenr(),
-        vim.fn.tabpagenr('$'),
-        icon,
-        "%f", -- filename
-        "%m"  -- modified
-    )
+  local filename = vim.fn.expand("%:t")
+  local ext = vim.fn.expand("%:e")
+  local icon = ""
+  if filename ~= "" then
+    icon = select(1, devicons.get_icon(filename, ext, { default = true })) or ""
+  end
+  return string.format(
+    "[%d/%d] %s %s %s",
+    vim.fn.tabpagenr(),
+    vim.fn.tabpagenr('$'),
+    icon,
+    "%f",     -- filename
+    "%m"      -- modified
+  )
 end
 vim.o.winbar = "%{%v:lua.winbar()%}"
 -- vim.o.winbar = "%f %m" -- simple winbar
@@ -66,28 +66,24 @@ vim.cmd.colorscheme("gruvbox")
 vim.api.nvim_set_hl(0, "OilDir", { fg = "#83A598" })
 
 vim.diagnostic.config({
-    -- remove inline diagnostic messages
-    virtual_text = false,
+  -- remove inline diagnostic messages
+  virtual_text = false,
 })
 
--- adding borders for lsp hover
-vim.lsp.handlers["textDocument/hover"] =
-    vim.lsp.with(vim.lsp.handlers.hover, {
-        border = "single",
-    })
-
--- disable automatic LSP signature popup
-vim.lsp.handlers["textDocument/signatureHelp"] =
-    vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = "single",
-        silent = true,
-    })
+vim.lsp.config("*", {
+  hover = {
+    border = "single",
+  },
+  signature_help = {
+    border = "single",
+  },
+})
 
 -- change c comments to //
 vim.api.nvim_create_autocmd('Filetype', {
-    pattern = 'c',
-    callback = function()
-        vim.bo.commentstring = '// %s'
-    end,
-    group = comment_augroup
+  pattern = 'c',
+  callback = function()
+    vim.bo.commentstring = '// %s'
+  end,
+  group = comment_augroup
 })

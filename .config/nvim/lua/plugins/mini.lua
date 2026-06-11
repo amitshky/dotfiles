@@ -19,7 +19,7 @@ return {
               border = "single",
             }
           end,
-        },
+        }
       })
     end,
   },

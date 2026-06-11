@@ -1,41 +1,21 @@
 return {
   {
     "williamboman/mason.nvim",
-    config = function()
-      require('mason').setup({
-        registries = {
-          'github:mason-org/mason-registry',
-          'github:crashdummyy/mason-registry',
-        },
-      })
-    end
+    config = true,
   },
+
   {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "williamboman/mason-lspconfig.nvim",
     dependencies = { "williamboman/mason.nvim" },
     config = function()
-      require("mason-tool-installer").setup({
+      require("mason-lspconfig").setup({
         ensure_installed = {
-          -- LSPs
-          "lua-language-server",
+          "lua_ls",
           "clangd",
-          "bash-language-server",
-          "python-lsp-server",
-          -- "emmet-language-server",
-          -- "html-lsp",
-          -- "vtsls",
-          -- "css-lsp",
-
-          -- Formatters
-          -- "prettier", -- JS/TS/HTML/CSS/JSON/Markdown/YAML
-          "stylua", -- Lua
-          "black",  -- Python
-
-          -- Linters
-          -- "eslint_d",
+          "bashls",
+          "pylsp",
         },
-        auto_update = false,  -- update installed tools automatically
-        run_on_start = false, -- check & install on startup
+        automatic_installation = true,
       })
     end,
   },

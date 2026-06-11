@@ -20,3 +20,6 @@ MenuBar=Disabled
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer
+
+[UiSettings]
+ColorScheme=BreezeLight

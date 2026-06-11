@@ -11,7 +11,7 @@ STATE=$(awk '/state/ {print $2}' <<< "$INFO")
 case "$STATE" in
     charging)      ICON=" ";;
     discharging)   ICON="󱐋 ";;
-    fully-charged) ICON="✔ ";;
+    fully-charged) ICON=" ";;
     *)             ICON="";;
 esac
 
