@@ -120,7 +120,8 @@ sudo pacman -S --needed \
 
 echo "install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# WARNING: this will run standard rust install (selecting the first option on install)
+# WARNING: this will run standard rust install
+# (selecting the first option on install)
 # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 . "$HOME/.cargo/env"
 rustup update
@@ -148,7 +149,8 @@ cd $PWD
 rm -rf "$HOME/dev-not-mine/yay"
 
 echo "installing flatpak packages"
-flatpak install -y app/md.obsidian.Obsidian/x86_64/stable com.protonvpn.ww app/org.localsend.localsend_app/x86_64/stable 
+flatpak install -y app/md.obsidian.Obsidian/x86_64/stable \
+    com.protonvpn.ww app/org.localsend.localsend_app/x86_64/stable 
 
 echo "installing gf2"
 git clone git@github.com:nakst/gf.git ~/dev-not-mine/gf

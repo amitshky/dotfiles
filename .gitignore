@@ -12,3 +12,4 @@
 .config/qBittorrent/qBittorrent-data.conf
 .config/qBittorrent/qBittorrent.conf
 .config/qimgv/savedState.conf
+.config/darktable/*.db*

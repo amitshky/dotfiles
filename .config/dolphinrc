@@ -8,8 +8,12 @@ ConfirmClosingMultipleTabs=false
 RememberOpenedTabs=false
 ShowFullPathInTitlebar=true
 ShowStatusBar=FullWidth
+ShowZoomSlider=true
 Version=202
 ViewPropsTimestamp=2026,1,20,13,9,18.821
+
+[IconsMode]
+PreviewSize=48
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -19,7 +23,7 @@ Places Icons Static Size=22
 MenuBar=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail
 
 [UiSettings]
 ColorScheme=BreezeLight

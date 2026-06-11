@@ -6,6 +6,8 @@
 # optional system-wide xprofile
 [ -f /etc/xprofile ] && . /etc/xprofile
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 feh --bg-fill $HOME/dotfiles/setup/wallpaper.jpg
 picom -b
 
