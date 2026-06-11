@@ -65,6 +65,7 @@ sudo pacman -S --needed \
     npm \
     ntfs-3g \
     okular \
+    openssh \
     pass \
     pavucontrol \
     picom \
@@ -173,9 +174,11 @@ fc-cache
 
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
+systemctl --user enable --now ssh-agent.service
 systemctl --user enable --now pipewire.socket pipewire-pulse.socket \
     wireplumber.service
 systemctl --user start pipewire pipewire-pulse wireplumber
+
 
 sudo printf "\n%s\n"\
 "NTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org" \
