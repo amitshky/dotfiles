@@ -11,7 +11,7 @@
    <GroupState-Tags-IsHidden>false</GroupState-Tags-IsHidden>
    <withBaloo>true</withBaloo>
    <GroupState-SearchFor-IsHidden>false</GroupState-SearchFor-IsHidden>
-   <GroupState-RecentlySaved-IsHidden>false</GroupState-RecentlySaved-IsHidden>
+   <GroupState-RecentlySaved-IsHidden>true</GroupState-RecentlySaved-IsHidden>
   </metadata>
  </info>
  <bookmark href="file:///home/almostblue">
@@ -190,6 +190,15 @@
     <UDI>/org/freedesktop/UDisks2/block_devices/sda1</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>4078e3fe78e3f098</uuid>
+   </metadata>
+  </info>
+ </separator>
+ <separator>
+  <info>
+   <metadata owner="http://www.kde.org">
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p3</UDI>
+    <isSystemItem>true</isSystemItem>
+    <uuid>292d77ea-6b4d-4293-8708-62179f33dbd0</uuid>
    </metadata>
   </info>
  </separator>

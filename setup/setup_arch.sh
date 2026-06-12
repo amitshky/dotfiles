@@ -7,6 +7,7 @@ sudo pacman -S --needed \
     arandr \
     ark \
     base-devel \
+    bash-completion \
     bear \
     bluez \
     bluez-utils \
@@ -23,6 +24,8 @@ sudo pacman -S --needed \
     copyq \
     darktable \
     discord \
+    docker \
+    docker-buildx \
     dolphin \
     dunst \
     fd \
@@ -37,6 +40,7 @@ sudo pacman -S --needed \
     gnome-themes-extra \
     gnupg \
     gpick \
+    htop \
     htop \
     imagemagick \
     imagemagick \
@@ -160,7 +164,10 @@ sudo cp gf2 /usr/local/bin
 cd $PWD
 
 echo "installing from AUR"
-yay visual-studio-code-bin qimgv
+yay -S \
+    visual-studio-code-bin \
+    qimgv \
+    --answerdiff None --answerclean All --noconfirm
 
 
 # other configurations
