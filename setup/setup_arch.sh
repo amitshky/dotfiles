@@ -56,6 +56,7 @@ sudo pacman -S --needed \
     libxinerama \
     libxrandr \
     lxappearance \
+    ly \
     man-db \
     man-pages \
     mkvtoolnix-gui \
@@ -183,6 +184,7 @@ fc-cache
 
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
+sudo systemctl enable ly@tty2.service
 systemctl --user enable --now pipewire.socket pipewire-pulse.socket \
     wireplumber.service
 systemctl --user start pipewire pipewire-pulse wireplumber
@@ -205,3 +207,6 @@ xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 318 1
 # enable tap to click
 xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 345 1
 xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 347 1
+
+# copy ly config
+sudo cp ./setup/ly/config.ini /etc/ly/

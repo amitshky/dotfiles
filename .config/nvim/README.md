@@ -3,26 +3,29 @@ Neovim config file locations
 - linux: `~/.config/nvim/`
 - windows: `%USERPROFILE%/AppData/Local/nvim/`
 
-> **NOTE:** change `run_on_start` to `true` if you want to automatically install some LSP
-
 ## Pre-requisites
 - [Neovim (v0.11 or higher)](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 
-LSPs that need to be installed (these can be installed through Mason too (which is installed in this config) (see [Mason Readme](https://github.com/williamboman/mason.nvim?tab=readme-ov-file#commands))):
-- [clangd](https://clangd.llvm.org/installation#installing-clangd)
-- [luals](https://luals.github.io/#neovim-install)
-- [bashls](https://github.com/bash-lsp/bash-language-server)
-- [pylsp](https://github.com/python-lsp/python-lsp-server)
-- [emmet_language_server](https://github.com/olrtg/emmet-language-server)
-- [html](https://github.com/microsoft/vscode-html-languageservice)
-- [vtsls](https://github.com/yioneko/vtsls)
-- [cssls](https://github.com/hrsh7th/vscode-langservers-extracted)
-
-These are OPTIONAL:
+These need to be installed for some of the plugins to work
 - [fd](https://github.com/sharkdp/fd)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-NOTE: checkout `newconfig` branch for new configuration files
+These need to be installed for the LSPs to be automatically installed:
+- [nodejs](https://nodejs.org/en/download)
+    - [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true)
+- [unzip](https://archlinux.org/packages/?name=unzip) (for linux; required by `clangd` to be installed automatically)
+- [python](https://www.python.org/downloads/)
+    - pip
+    - venv
+
+### NOTE
+
+These are LSPs that get installed automatically through [Mason](https://github.com/williamboman/mason.nvim?tab=readme-ov-file#commands).
+- [clangd](https://clangd.llvm.org/installation#installing-clangd)
+- [lua_ls](https://luals.github.io/#neovim-install)
+- [bashls](https://github.com/bash-lsp/bash-language-server)
+- [pylsp](https://github.com/python-lsp/python-lsp-server)
+
 
 ## Configuring multiple nvim instances
 - if your `.config` directory looks like this:

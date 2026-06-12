@@ -14,7 +14,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox"
 
-export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/scripts:$HOME/programs/arduino-ide_2.3.8_Linux_64bit/"
+export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/scripts"
 
 # enable bat to colorize man pages
 # export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
