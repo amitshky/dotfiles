@@ -2,7 +2,7 @@
 
 case "$(printf "⏻  Shutdown\n⏾  Sleep\n  Restart\n󰍃  Logout" | dmenu -i -l 4 -c -p "power:")" in
   *Shutdown)  systemctl poweroff -i ;;
-  *Sleep)     slock systemctl suspend -i ;;
+  *Sleep)     systemctl suspend -i ;;
   *Restart)   systemctl reboot -i ;;
   *Logout)    pkill dwm ;;
   *)          exit 1 ;;
