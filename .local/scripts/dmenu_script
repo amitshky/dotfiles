@@ -18,6 +18,7 @@ if [[ -n "$selected" ]]; then
         case "$selected" in
             Spotify)          firefox --new-window open.spotify.com ;;
             Private)          firefox --private-window ;;
+            dolphin)          dolphin -stylesheet ~/.config/qt/dolpin-darkmode-fix.qss ;;
             "Whatsapp (NTC)") flatpak run com.google.Chrome web.whatsapp.com ;;
             "Whatsapp (UK)")  firefox --new-window web.whatsapp.com ;;
             *)                $selected &>/dev/null & ;;

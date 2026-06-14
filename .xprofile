@@ -6,3 +6,4 @@ export BROWSER="firefox"
 export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/scripts"
 
 export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLESHEET_PATH="$HOME/.config/qt/dolpin-darkmode-fix.qss"
