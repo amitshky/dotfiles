@@ -1,6 +1,15 @@
 # dotfiles
 dot files for linux
 
+## Cloning
+```sh
+git clone --recurse-submodules https://github.com/amitshky/dotfiles
+```
+- you can also configure to push changes in submodule along with main
+```sh
+git config push.recurseSubmodules on-demand
+```
+
 ## Requirements
 - [stow](https://www.gnu.org/software/stow/)
 

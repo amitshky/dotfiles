@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+PWD=$(pwd)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 echo "installing packages"
 sudo pacman -S --needed \
     7zip \
@@ -133,14 +136,6 @@ rustup update
 echo "creating directories"
 mkdir -p $HOME/{dev,dev-not-mine,.fonts,.config,.local,downloads,documents,desktop,music,pictures,videos}
 sudo mkdir /mnt/{hdd,ssd,windows,camera}
-
-echo "cloning a few repos"
-git clone https://amitshky@github.com/amitshky/st "$HOME/.local/src/st"
-git clone https://amitshky@github.com/amitshky/dwm "$HOME/.local/src/dwm"
-git clone https://amitshky@github.com/amitshky/dmenu "$HOME/.local/src/dmenu"
-git clone https://amitshky@github.com/amitshky/dwmblocks-async \
-    "$HOME/.local/src/dwmblocks-async"
-git clone https://amitshky@github.com/amitshky/slock "$HOME/.local/src/slock"
 
 
 # install other programs

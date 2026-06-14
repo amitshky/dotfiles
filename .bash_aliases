@@ -29,3 +29,5 @@ alias cdm="sudo make -C \"$HOME/.local/src/dmenu\" clean install"
 alias cdb="sudo make -C \"$HOME/.local/src/dwmblocks-async\" clean install"
 # alias csl="sudo make -C \"$HOME/.local/src/slock\" clean install"
 alias csall="cdwm && cdm && cdb && cst" # compile all suckless tools
+
+alias dolphin="dolphin -stylesheet $HOME/.config/qt/dolpin-darkmode-fix.qss"

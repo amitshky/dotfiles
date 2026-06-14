@@ -3,6 +3,7 @@
 .config/copyq/copyq-monitor.ini
 .config/copyq/copyq-monitor.ini.*
 .config/copyq/copyq.lock
+.config/copyq/.copyq_s
 .config/copyq/copyq.pub
 .config/copyq/copyq_geometry.ini
 .config/copyq/copyq_geometry.ini.*
