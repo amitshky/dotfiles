@@ -17,8 +17,6 @@ sudo pacman -S --needed \
     btop \
     chafa \
     clang \
-    clang-format \
-    clang-tidy \
     cloc \
     cmake \
     copyq \
@@ -121,6 +119,7 @@ sudo pacman -S --needed \
     xorg-xset \
     xorg-xsetroot \
     yazi \
+    yt-dlp \
     zoxide
 
 echo "install rust"

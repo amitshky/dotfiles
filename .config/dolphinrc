@@ -26,4 +26,4 @@ MenuBar=Disabled
 Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail
 
 [UiSettings]
-ColorScheme=BreezeLight
+ColorScheme=BreezeDark
