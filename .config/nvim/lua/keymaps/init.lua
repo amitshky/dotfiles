@@ -103,7 +103,7 @@ vim.keymap.set('n', '<leader>s',
 )
 
 -- others
-vim.keymap.set('n', '<leader>F', 'V%zf', { desc = "Fold matching pair" })
+vim.keymap.set('n', 'zF', 'V%zf', { desc = "Fold matching pair" })
 
 require('keymaps.window')
 require('keymaps.pick')
