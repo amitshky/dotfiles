@@ -68,7 +68,7 @@ vim.keymap.set('n', '<leader>x', '<cmd>bd<cr>', { desc = "Close current buffer" 
 -- tabs
 vim.keymap.set('n', '<M-h>', '<cmd>tabprevious<cr>', { desc = "Prev Tab" })
 vim.keymap.set('n', '<M-l>', '<cmd>tabnext<cr>', { desc = "Next Tab" })
-vim.keymap.set('n', '<leader>tn', '<cmd>tabnew<cr>', { desc = "New Tab" })
+vim.keymap.set('n', '<leader>tt', '<cmd>tabnew<cr>', { desc = "New Tab" })
 vim.keymap.set('n', '<leader>tx', '<cmd>tabclose<cr>', { desc = "Close Tab" })
 vim.keymap.set('n', '<leader>t1', '1gt', { desc = "Swtich to Tab 1" })
 vim.keymap.set('n', '<leader>t2', '2gt', { desc = "Swtich to Tab 2" })
