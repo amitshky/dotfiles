@@ -102,6 +102,8 @@ vim.keymap.set('n', '<leader>s',
   end, { desc = "Open Snipe buffer menu" }
 )
 
+-- others
+vim.keymap.set('n', '<leader>F', 'V%zf', { desc = "Fold matching pair" })
 
 require('keymaps.window')
 require('keymaps.pick')
