@@ -2,7 +2,7 @@
 
 ## Docker
 ```sh
-pacman -S docker docker-buildx
+pacman -S docker docker-buildx docker-compose
 ```
 - then run `dockerd` before using `docker` commands
 - also add this to `~/.docker/config.json`
