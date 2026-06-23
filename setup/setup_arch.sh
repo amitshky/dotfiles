@@ -67,6 +67,7 @@ sudo pacman -S --needed \
     networkmanager \
     nodejs \
     noto-fonts \
+    noto-fonts-cjk \
     noto-fonts-emoji \
     npm \
     ntfs-3g \
@@ -160,9 +161,9 @@ cd $PWD
 
 echo "installing from AUR"
 yay -S \
-    visual-studio-code-bin \
-    qimgv \
-    --answerdiff None --answerclean All --noconfirm
+    qimgv-git \
+    visual-studio-code-bin
+    # --answerdiff None --answerclean All --noconfirm
 
 
 # other configurations

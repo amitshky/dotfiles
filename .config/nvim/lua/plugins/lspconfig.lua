@@ -22,6 +22,11 @@ return {
                 "clangd",
                 "--background-index",
                 "--clang-tidy",
+                "--header-insertion=never",
+                "--completion-style=detailed",
+                "--function-arg-placeholders=0",
+                "--fallback-style=llvm",
+                "--log=verbose"
               },
             })
 

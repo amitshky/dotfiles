@@ -18,6 +18,7 @@ brightness_signal &
 battery_signal &
 hide_cursor &
 volume_level &
+xsettingsd &
 
 xset -dpms # disable display power management signal
 
