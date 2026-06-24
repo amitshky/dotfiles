@@ -9,7 +9,7 @@ if [ -z "$IMAGE" ]; then
     if [ -f "$STATE_FILE" ]; then
         IMAGE="$(cat "$STATE_FILE")"
     else
-        IMAGE="$HOME/pictures/slideshow/stellar-blade-blood-rain-evie-0.jpg"
+        IMAGE="$HOME/pictures/wallpapers/stellar-blade-blood-rain-evie-0.jpg"
     fi
 fi
 

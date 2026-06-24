@@ -12,6 +12,7 @@ ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [General]
 AlwaysShowTabBar=true
+CloseSplitViewChoice=RightView
 RememberOpenedTabs=false
 ShowFullPath=true
 ShowStatusBar=FullWidth
@@ -32,7 +33,10 @@ Places Icons Static Size=22
 MenuBar=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,rawthumbnail,glycin-svg,svgthumbnail,ffmpegthumbs
+Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,rawthumbnail,glycin-svg,svgthumbnail,ffmpegthumbs
+
+[Shortcut Schemes]
+Current Scheme=Default
 
 [UiSettings]
 ColorScheme=BreezeDark

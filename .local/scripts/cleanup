@@ -8,6 +8,13 @@ rm -r /tmp/yazi*
 rm $HOME/.local/share/recently-used.xbel
 rm $HOME/.local/share/qBittorrent/logs/qbittorrent.log
 
+awk '
+/^\[ExtHistoryCombo/ {skip=1; next}
+/^\[/ {skip=0}
+!skip
+' ~/.config/krenamerc > ~/.config/krenamerc.new &&
+mv ~/.config/krenamerc.new ~/.config/krenamerc
+
 killall copyq
 sleep 1
 copyq &

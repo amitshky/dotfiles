@@ -50,6 +50,7 @@ sudo pacman -S --needed \
     kde-cli-tools \
     keepassxc \
     kimageformats \
+    krename \
     lazygit \
     libqalculate \
     libreoffice-fresh \
