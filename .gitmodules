@@ -10,3 +10,6 @@
 [submodule ".local/src/dwmblocks-async"]
 	path = .local/src/dwmblocks-async
 	url = git@github.com:amitshky/dwmblocks-async.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:amitshky/nvim.git
