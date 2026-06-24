@@ -19,3 +19,13 @@ pacman -S docker docker-buildx docker-compose
 pacman -S ros2-humble
 ```
 
+## Nvidia drivers
+- checkout [archwiki Nvidia](https://wiki.archlinux.org/title/NVIDIA)
+- this is for GTX1050
+```sh
+yay -S nvidia-580xx-dkms nvidia-580xx-utils
+dkms status
+sudo dkms autoinstall
+sudo modprobe nvidia
+reboot
+```
