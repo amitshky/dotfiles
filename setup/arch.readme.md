@@ -1,5 +1,19 @@
 # Setting up Arch
 
+## Don't suspend on lid close
+```sh
+sudo nvim /etc/systemd/logind.conf
+```
+- add these or set these options to `ignore`
+```sh
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+```
+- restart the logind
+```sh
+sudo systemctl restart systemd-logind
+```
+
 ## Docker
 ```sh
 pacman -S docker docker-buildx docker-compose
