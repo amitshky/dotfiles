@@ -14,7 +14,7 @@ sudo pacman -S --needed \
     bear \
     bluez \
     bluez-utils \
-    breeze \
+    breeze-gtk \
     breeze-icons \
     brightnessctl \
     btop \
@@ -104,6 +104,7 @@ sudo pacman -S --needed \
     unzip \
     valgrind \
     vim \
+    vlc \
     wireplumber \
     xcb-util \
     xclip \
