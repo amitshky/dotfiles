@@ -58,3 +58,6 @@ reboot
 ```sh
 yay -S arduino-ide-bin
 ```
+
+## Wallpaper slideshow
+- [https://ejmastnak.com/tutorials/arch/wallpaper/](https://ejmastnak.com/tutorials/arch/wallpaper/)
