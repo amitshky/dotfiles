@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Service
+MimeType=image/jpeg;image/png;image/webp;
+Actions=SetWallpaper
+
+[Desktop Action SetWallpaper]
+Name=Set as Wallpaper
+Icon=image
+
+Exec=~/dotfiles/.local/scripts/change_wallpaper.sh %f

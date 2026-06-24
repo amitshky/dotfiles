@@ -208,3 +208,7 @@ xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 347 1
 
 # copy ly config
 sudo cp ./setup/ly/config.ini /etc/ly/
+
+
+# create dolphin context menu options for custom actions
+kbuildsycoca6

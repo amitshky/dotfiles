@@ -1,12 +1,15 @@
 [Show]
 compressfileitemaction=true
 extractfileitemaction=true
+filelight=true
 forgetfileitemaction=true
+hidefileitemaction=false
 kactivitymanagerd_fileitem_linking_plugin=true
 kdeconnectfileitemaction=true
 makefileactions=true
 mountisoaction=true
 movetonewfolderitemaction=true
 rename=true
+setfoldericonitemaction=true
 sharefileitemaction=true
 tagsfileitemaction=true

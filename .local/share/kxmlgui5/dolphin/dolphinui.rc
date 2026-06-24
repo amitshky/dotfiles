@@ -192,5 +192,6 @@
   <Action name="view_zoom_in" priority="0"/>
   <Action name="view_zoom_out" priority="0"/>
   <Action name="view_zoom_reset" priority="0"/>
+  <Action name="show_preview" shortcut=""/>
  </ActionProperties>
 </gui>
