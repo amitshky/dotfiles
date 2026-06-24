@@ -6,6 +6,7 @@ ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [DetailsMode]
 ExpandableFolders=false
+IconSize=48
 UseSystemFont=false
 ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 

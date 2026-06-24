@@ -29,3 +29,8 @@ sudo dkms autoinstall
 sudo modprobe nvidia
 reboot
 ```
+
+## Arduino IDE
+```sh
+yay -S arduino-ide-bin
+```

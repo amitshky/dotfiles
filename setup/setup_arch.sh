@@ -102,6 +102,7 @@ sudo pacman -S --needed \
     udisks2 \
     ueberzugpp \
     unclutter \
+    unrar \
     unzip \
     valgrind \
     vim \
