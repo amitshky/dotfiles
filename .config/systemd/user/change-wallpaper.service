@@ -4,7 +4,7 @@ Wants=change-wallpaper.timer
 
 [Service]
 Type=oneshot
-ExecStart=/bin/sh ~/dotfiles/.local/scripts/change_wallpaper.sh
+ExecStart=/bin/sh /home/almostblue/dotfiles/.local/scripts/change_wallpaper.sh
 
 [Install]
 WantedBy=graphical.target

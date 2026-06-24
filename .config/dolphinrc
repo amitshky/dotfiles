@@ -11,10 +11,8 @@ UseSystemFont=false
 ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [General]
-ConfirmClosingMultipleTabs=false
-RememberOpenedTabs=false
+AlwaysShowTabBar=true
 ShowFullPath=true
-ShowFullPathInTitlebar=true
 ShowStatusBar=FullWidth
 ShowZoomSlider=true
 Version=202
