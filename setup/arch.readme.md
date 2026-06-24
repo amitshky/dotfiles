@@ -5,7 +5,7 @@
 pacman -S docker docker-buildx docker-compose
 ```
 - then run `dockerd` before using `docker` commands
-- also add this to `~/.docker/config.json`
+- also add this to `~/.docker/config.json` (detach keys is mapped to `ctrl+p` by default)
 ```json
 {
   "detachKeys": "ctrl-@"
@@ -24,6 +24,16 @@ pacman -S ros2-humble
 - this is for GTX1050
 ```sh
 yay -S nvidia-580xx-dkms nvidia-580xx-utils
+```
+- blacklist nouveau
+```sh
+sudo nvim /etc/modprobe.d/blacklist-nouveau.conf
+
+# add the following:
+blacklist nouveau
+options nouveau modeset=0
+```
+```sh
 dkms status
 sudo dkms autoinstall
 sudo modprobe nvidia
