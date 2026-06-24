@@ -1,11 +1,20 @@
 #!/bin/sh
 
+STATE_FILE="$HOME/.cache/wallpaper_last"
+
 IMAGE="$1"
 
-# fallback if nothing passed
+# if no argument passed, reuse last wallpaper
 if [ -z "$IMAGE" ]; then
-    IMAGE="~/pictures/slideshow/stellar-blade-blood-rain-evie-0.jpg"
+    if [ -f "$STATE_FILE" ]; then
+        IMAGE="$(cat "$STATE_FILE")"
+    else
+        IMAGE="$HOME/pictures/slideshow/stellar-blade-blood-rain-evie-0.jpg"
+    fi
 fi
 
-# DISPLAY=:0 feh --no-fehbg --bg-fill --randomize ~/pictures/slideshow/{*.jpg,*.png}
+# apply wallpaper
 feh --no-fehbg --bg-fill "$IMAGE"
+
+# save current choice as new default
+echo "$IMAGE" > "$STATE_FILE"

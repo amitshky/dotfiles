@@ -14,6 +14,7 @@ sudo pacman -S --needed \
     bear \
     bluez \
     bluez-utils \
+    breeze \
     breeze-gtk \
     breeze-icons \
     brightnessctl \

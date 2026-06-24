@@ -6,7 +6,7 @@ flatpak_apps=$(flatpak list --app --columns=application)
 selected=$(
     {
         printf "Spotify\nPrivate\nWhatsapp (NTC)\nWhatsapp (UK)\n"
-        flatpak list --app --columns=application
+        # flatpak list --app --columns=application
         dmenu_path
     } | dmenu -i -c -z 800 -l 8 -p "run:"
 )
