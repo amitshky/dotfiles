@@ -20,7 +20,7 @@
 #     PATH="$HOME/.local/bin:$PATH"
 # fi
 
-export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=qt^ct
 export QT_STYLESHEET_PATH="$HOME/.config/qt/dolpin-darkmode-fix.qss"
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx

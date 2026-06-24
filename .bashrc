@@ -19,7 +19,7 @@ export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/script
 # enable bat to colorize man pages
 # export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
 
-export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_STYLESHEET_PATH="$HOME/.config/qt/dolpin-darkmode-fix.qss"
 export GPG_TTY=$(tty)
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
