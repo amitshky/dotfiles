@@ -48,6 +48,7 @@ sudo pacman -S --needed \
     jq \
     kde-cli-tools \
     keepassxc \
+    kimageformats \
     lazygit \
     libqalculate \
     libreoffice-fresh \
