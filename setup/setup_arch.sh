@@ -46,6 +46,7 @@ sudo pacman -S --needed \
     htop \
     imagemagick \
     imagemagick \
+    intel-media-driver \
     jq \
     kde-cli-tools \
     keepassxc \
@@ -63,6 +64,8 @@ sudo pacman -S --needed \
     ly \
     man-db \
     man-pages \
+    mesa \
+    mesa-utils \
     mkvtoolnix-gui \
     mpv \
     nano \
@@ -109,6 +112,8 @@ sudo pacman -S --needed \
     valgrind \
     vim \
     vlc \
+    vlc-plugin-ffmpeg \
+    vulkan-intel \
     wireplumber \
     xcb-util \
     xclip \
@@ -210,6 +215,11 @@ xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 347 1
 
 # copy ly config
 sudo cp ./setup/ly/config.ini /etc/ly/
+
+# xinput config
+sudo mkdir -p /etc/X11/xorg.conf.d/
+sudo cp ./setup/X11/xorg.conf.d/30-touchpad.conf /etc/X11/xorg.conf.d/
+sudo cp ./setup/X11/xorg.conf.d/50-mouse-accel.conf /etc/X11/xorg.conf.d/
 
 
 # create dolphin context menu options for custom actions

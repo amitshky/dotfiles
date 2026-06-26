@@ -53,6 +53,7 @@ sudo dkms autoinstall
 sudo modprobe nvidia
 reboot
 ```
+> NOTE: make sure `xf86-video-intel` is not installed
 
 ## Arduino IDE
 ```sh

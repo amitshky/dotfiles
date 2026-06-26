@@ -25,11 +25,5 @@ xset -dpms # disable display power management signal
 
 xrdb ~/.Xresources
 
-# change the scrolling direction of the touchpad
-# natural scroll enabled
-xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 306 1
-# enable tap to click
-xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 333 1
-
 # exec dwm
 exec dbus-run-session dwm
