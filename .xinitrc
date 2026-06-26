@@ -20,8 +20,12 @@ battery_signal &
 hide_cursor &
 volume_level &
 xsettingsd &
+lxqt-powermanagement &
+
+xss-lock lockscreen &
 
 xset -dpms # disable display power management signal
+xset s 0 0
 
 xrdb ~/.Xresources
 

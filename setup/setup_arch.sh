@@ -171,9 +171,10 @@ cd $PWD
 
 echo "installing from AUR"
 yay -S \
+    i3lock-color \
     qimgv-git \
     visual-studio-code-bin
-    # --answerdiff None --answerclean All --noconfirm
+    --answerdiff None --answerclean All --noconfirm
 
 
 # other configurations

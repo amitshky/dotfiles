@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-case "$(printf "⏻  Shutdown\n⏾  Sleep\n  Restart\n󰍃  Logout" | dmenu -i -l 4 -c -p "power:")" in
+case "$(printf "⏻  Shutdown\n󰌾  Lock (Mod+Shift+L)\n⏾  Sleep\n  Restart\n󰍃  Logout" | dmenu -i -l 5 -c -p "power:")" in
   *Shutdown)  systemctl poweroff -i ;;
   *Sleep)     systemctl suspend -i ;;
   *Restart)   systemctl reboot -i ;;
   *Logout)    pkill dwm ;;
+  *Lock)      lockscreen ;;
   *)          exit 1 ;;
 esac
