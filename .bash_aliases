@@ -21,7 +21,7 @@ alias wd="cd ~/dev/"
 alias wc="cd ~/dotfiles/"
 alias wo="cd ~/sync/ObsidianVault/"
 alias wu="cd ~/documents/notes/"
-# alias cat="bat" # use \cat to override this alias and use the actual cat command
+alias cat="bat --theme=gruvbox-dark" # use \cat to override this alias and use the actual cat command
 
 alias cdwm="sudo make -C \"$HOME/.local/src/dwm\" clean install"
 alias cst="sudo make -C \"$HOME/.local/src/st\" clean install"
