@@ -22,7 +22,7 @@ volume_level &
 xsettingsd &
 lxqt-powermanagement &
 
-xss-lock lockscreen &
+xss-lock --transfer-sleep-lock lockscreen &
 
 xset -dpms # disable display power management signal
 xset s 0 0
