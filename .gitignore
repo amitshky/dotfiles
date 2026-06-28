@@ -14,3 +14,5 @@
 .config/qBittorrent/qBittorrent.conf
 .config/qimgv/savedState.conf
 .config/darktable/*.db*
+.gnupg/*
+!.gnupg/gpg-agent.conf

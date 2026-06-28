@@ -60,6 +60,8 @@ sudo pacman -S --needed \
     libxft \
     libxinerama \
     libxrandr \
+    lightdm \
+    lightdm-slick-greeter \
     lxappearance \
     ly \
     man-db \
@@ -190,10 +192,10 @@ fc-cache
 
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
-sudo systemctl enable ly@tty2.service
 systemctl --user enable --now pipewire.socket pipewire-pulse.socket \
     wireplumber.service
 systemctl --user start pipewire pipewire-pulse wireplumber
+sudo systemctl enable lightdm
 
 
 sudo printf "\n%s\n"\
@@ -214,13 +216,17 @@ xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 318 1
 xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 345 1
 xinput set-prop "ELAN0504:01 04F3:3091 Touchpad" 347 1
 
-# copy ly config
-sudo cp ./setup/ly/config.ini /etc/ly/
+# copy dm config
+sudo cp $HOME/dotfiles/setup/lightdm/{lightdm.conf,slick-greeter.conf} /etc/lightdm/
+sudo mkdir -p /usr/share/{xsessions,bg}
+sudo cp $HOME/dotfiles/setup/lightdm/dwm.desktop /usr/share/xsessions/
+sudo cp $HOME/dotfiles/setup/lightdm/startdwm /usr/local/bin/
+sudo cp $HOME/dotfiles/setup/wallpaper.jpg /usr/share/bg/
 
 # xinput config
 sudo mkdir -p /etc/X11/xorg.conf.d/
-sudo cp ./setup/X11/xorg.conf.d/30-touchpad.conf /etc/X11/xorg.conf.d/
-sudo cp ./setup/X11/xorg.conf.d/50-mouse-accel.conf /etc/X11/xorg.conf.d/
+sudo cp $HOME/dotfiles/setup/X11/xorg.conf.d/30-touchpad.conf /etc/X11/xorg.conf.d/
+sudo cp $HOME/dotfiles/setup/X11/xorg.conf.d/50-mouse-accel.conf /etc/X11/xorg.conf.d/
 
 
 # create dolphin context menu options for custom actions
