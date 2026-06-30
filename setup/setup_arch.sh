@@ -12,6 +12,7 @@ sudo pacman -S --needed \
     base-devel \
     bash-completion \
     bear \
+    blender \
     bluez \
     bluez-utils \
     breeze \
@@ -60,10 +61,10 @@ sudo pacman -S --needed \
     libxft \
     libxinerama \
     libxrandr \
+    light-locker \
     lightdm \
     lightdm-slick-greeter \
     lxappearance \
-    ly \
     man-db \
     man-pages \
     mesa \
@@ -173,7 +174,6 @@ cd $PWD
 
 echo "installing from AUR"
 yay -S \
-    i3lock-color \
     qimgv-git \
     visual-studio-code-bin
     --answerdiff None --answerclean All --noconfirm

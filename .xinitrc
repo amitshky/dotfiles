@@ -14,13 +14,17 @@ dunst &
 # /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
 dual_right_display &
+
 volume_signal &
 brightness_signal &
 battery_signal &
-hide_cursor &
-volume_level &
+
 xsettingsd &
 lxqt-powermanagement &
+light-locker &
+
+hide_cursor &
+volume_level &
 
 xss-lock --transfer-sleep-lock lockscreen &
 
@@ -30,4 +34,5 @@ xset s 0 0
 xrdb ~/.Xresources
 
 # exec dwm
-exec dbus-run-session dwm
+# exec dbus-run-session dwm
+exec dwm

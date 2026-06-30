@@ -13,6 +13,7 @@ alias vdir='vdir --color=auto'
 alias lg="lazygit"
 alias ti="tmuxinit"
 alias t="tmux"
+alias z="zellij"
 alias qi="qimgv"
 alias n="nvim ."
 alias m="NVIM_APPNAME=nvim-minimal nvim ."
