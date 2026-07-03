@@ -1,9 +1,10 @@
 #! /usr/bin/env bash
 
-# feh --bg-fill $HOME/dotfiles/setup/wallpaper.jpg
-change_wallpaper.sh
+# programs
 picom -b
-
+xsettingsd &
+lxqt-powermanagement &
+light-locker --no-lock-on-lid &
 flameshot &
 copyq &
 dwmblocks &
@@ -13,16 +14,12 @@ dunst &
 # for dolphin
 # /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
+# scripts
+change_walpaper.sh
 dual_right_display &
-
 volume_signal &
 brightness_signal &
 battery_signal &
-
-xsettingsd &
-lxqt-powermanagement &
-light-locker &
-
 hide_cursor &
 volume_level &
 

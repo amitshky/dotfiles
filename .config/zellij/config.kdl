@@ -156,26 +156,34 @@ keybinds clear-defaults=true {
         }
     }
     shared_among "normal" "locked" {
-        bind "Alt left" { MoveFocusOrTab "left"; }
-        bind "Alt down" { MoveFocus "down"; }
-        bind "Alt up" { MoveFocus "up"; }
-        bind "Alt right" { MoveFocusOrTab "right"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Alt 9" { GoToTab 9; }
         bind "Alt =" { Resize "Increase"; }
-        bind "Alt [" { PreviousSwapLayout; }
-        bind "Alt ]" { NextSwapLayout; }
-        bind "Alt shift f" { ToggleFloatingPanes; }
+        bind "Alt ." { GoToNextTab; }
+        bind "Alt ," { GoToPreviousTab; }
+        bind "Alt Shift f" { ToggleFloatingPanes; }
+        bind "Alt Shift o" { NextSwapLayout; }
+        bind "Alt Shift i" { PreviousSwapLayout; }
         bind "Alt h" { MoveFocusOrTab "left"; }
         bind "Alt i" { MoveTab "left"; }
         bind "Alt j" { MoveFocus "down"; }
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
-        bind "Alt n" { NewPane; }
-        bind "Alt o" { MoveTab "right"; }
-        bind "Alt p" { TogglePaneInGroup; }
-        bind "Alt Shift p" { ToggleGroupMarking; }
+        bind "Alt n" { NewTab; }
+        bind "Alt o" { ToggleTab; }
+        bind "Alt p" { NewPane; }
         bind "Alt q" { CloseFocus; }
+        // bind "Alt p" { TogglePaneInGroup; }
+        // bind "Alt Shift p" { ToggleGroupMarking; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl g" { SwitchToMode "locked"; }
@@ -242,7 +250,9 @@ keybinds clear-defaults=true {
 // changing these requires a restart to take effect
 plugins {
     about location="zellij:about"
-    compact-bar location="zellij:compact-bar"
+    compact-bar location="zellij:compact-bar" {
+        tooltip "F1"
+    }
     configuration location="zellij:configuration"
     filepicker location="zellij:strider" {
         cwd "/"
@@ -313,7 +323,7 @@ default_mode "locked"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-// default_layout "compact"
+default_layout "compact"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
@@ -373,7 +383,7 @@ default_mode "locked"
 // that will be used by default if this option is not set.
 // Examples:
 //
-// copy_command "xclip -selection clipboard" // x11
+copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 // 
@@ -422,7 +432,7 @@ default_mode "locked"
 //   - true (default)
 //   - false
 // 
-// session_serialization false
+session_serialization false
  
 // Whether pane viewports are serialized along with the session, default is false
 // Options:
@@ -528,7 +538,7 @@ show_startup_tips false
  
 // Whether to enable mouse hover visual effects (frame highlight and help text)
 // default is true
-// mouse_hover_effects false
+mouse_hover_effects false
  
 // Whether to show visual bell indicators (pane/tab frame flash and [!] suffix)
 // default is true

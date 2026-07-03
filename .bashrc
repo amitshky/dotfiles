@@ -48,3 +48,5 @@ function y() {
 
 # run ssh-agent
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" > /dev/null
+
+eval "$(pyenv init - bash)"
