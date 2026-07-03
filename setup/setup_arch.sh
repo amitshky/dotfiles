@@ -11,6 +11,8 @@ sudo pacman -S --needed \
     ark \
     base-devel \
     bash-completion \
+    bat \
+    bat-extras \
     bear \
     blender \
     bluez \
