@@ -16,3 +16,4 @@
 .config/darktable/*.db*
 .gnupg/*
 !.gnupg/gpg-agent.conf
+compile_commands.json

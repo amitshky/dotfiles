@@ -33,6 +33,7 @@ sudo pacman -S --needed \
     docker-buildx \
     dolphin \
     dunst \
+    fastfetch \
     fd \
     feh \
     ffmpeg \
@@ -41,6 +42,7 @@ sudo pacman -S --needed \
     flameshot \
     flatpak \
     fzf \
+    gimp \
     git \
     gnome-themes-extra \
     gnupg \
