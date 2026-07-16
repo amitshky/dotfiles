@@ -1,0 +1,30 @@
+# unbind C-b
+# set -g prefix C-s
+# bind C-s send-prefix
+
+set -g mouse on
+set -g set-clipboard on
+set -g mode-keys vi
+
+set -ag status-style bg="#98971A"
+set -ag status-style fg="#282828"
+set -g window-status-current-style bg="#151515",fg="#98971A"
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind o last-window
+bind X confirm-before -p "Kill this session? (y/n)" kill-session
+
+# vim-like selection and copy
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-pipe "xclip -selection clipboard"
+bind-key -T copy-mode-vi r send-keys -X rectangle-toggle
+
+# to make the mouse selection not go back to the end in copy mode
+# also makes it possible to use mouse to select and copy normally
+unbind -T copy-mode-vi MouseDragEnd1Pane
+
+# set default directory for new windows in this session to current directory:
+bind M-c attach-session -c "#{pane_current_path}"

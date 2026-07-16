@@ -17,7 +17,7 @@ export BROWSER="firefox"
 export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/scripts"
 
 # enable bat to colorize man pages
-export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
+# export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
 
 export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_STYLESHEET_PATH="$HOME/.config/qt/dolpin-darkmode-fix.qss"
@@ -50,3 +50,4 @@ function y() {
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" > /dev/null
 
 eval "$(pyenv init - bash)"
+# eval "$(uv generate-shell-completion bash)"
