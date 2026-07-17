@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+grep -rIl '？' --include='*.vtt' . | xargs -r sed -i 's/？/?/g'

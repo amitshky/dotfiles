@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+shopt -s nullglob
+
+ext="${1:-mka}"
+files=( *."$ext" )
+
+if (( ${#files[@]} == 0 )); then
+    echo "No .$ext files found."
+    exit 1
+fi
+
+cmd=(
+    mkvmerge
+    -o out.mka
+)
+
+# Add chapters if present
+[[ -f chapters.txt ]] && cmd+=(--chapters chapters.txt)
+
+# Add cover if present
+if [[ -f cover.jpg ]]; then
+    cmd+=(
+        --attachment-name cover.jpg
+        --attachment-mime-type image/jpeg
+        --attach-file cover.jpg
+    )
+fi
+
+# First file
+cmd+=( "${files[0]}" )
+
+# Append the rest
+for ((i=1; i<${#files[@]}; i++)); do
+    cmd+=( + "${files[i]}" )
+done
+
+echo "Creating out.mka from ${#files[@]} .$ext file(s)..."
+"${cmd[@]}"

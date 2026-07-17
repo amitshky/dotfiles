@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+shopt -s nullglob
+
+for audio in *.wav *.mp3; do
+    vtt="${audio}.vtt"
+
+    if [[ ! -f "$vtt" ]]; then
+        echo "Skipping: '$audio' (missing '$vtt')"
+        continue
+    fi
+
+    output="${audio%.*}.mka"
+
+    echo "Creating: '$output'"
+
+    mkvmerge \
+        -o "$output" \
+        "$audio" \
+        "$vtt"
+done
