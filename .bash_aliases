@@ -15,8 +15,6 @@ alias ti="tmuxinit"
 alias t="tmux"
 alias z="zellij"
 alias qi="qimgv"
-alias n="nvim ."
-alias m="NVIM_APPNAME=nvim-minimal nvim ."
 alias mvim="NVIM_APPNAME=nvim-minimal nvim"
 alias wd="cd ~/dev/"
 alias wc="cd ~/dotfiles/"
@@ -32,3 +30,6 @@ alias cdb="sudo make -C \"$HOME/.local/src/dwmblocks-async\" clean install"
 alias csall="cdwm && cdm && cdb && cst" # compile all suckless tools
 
 alias dolphin="dolphin -stylesheet $HOME/.config/qt/dolpin-darkmode-fix.qss"
+
+alias pa='pyenv activate'
+alias pd='pyenv deactivate'

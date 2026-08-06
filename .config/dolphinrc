@@ -22,7 +22,7 @@ Version=202
 ViewPropsTimestamp=2026,1,20,13,9,18.821
 
 [IconsMode]
-PreviewSize=48
+IconSize=64
 UseSystemFont=false
 ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
@@ -35,6 +35,9 @@ MenuBar=Disabled
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,rawthumbnail,glycin-svg,svgthumbnail,ffmpegthumbs
+
+[Search]
+What=FileContents
 
 [Shortcut Schemes]
 Current Scheme=Default

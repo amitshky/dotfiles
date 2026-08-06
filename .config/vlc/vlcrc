@@ -1833,7 +1833,7 @@
 #avcodec-codec=
 
 # Hardware decoding (string)
-avcodec-hw=vaapi_drm
+#avcodec-hw=any
 
 # Threads (integer)
 #avcodec-threads=0
@@ -2169,7 +2169,7 @@ qt-recentplay=0
 #qt-recentplay-filter=
 
 # Continue playback? (integer)
-qt-continue=0
+#qt-continue=1
 
 # Enable Dark Mode (boolean)
 qt-dark-palette=1
@@ -2572,7 +2572,7 @@ qt-privacy-ask=0
 #audio-time-stretch=1
 
 # Audio output module (string)
-aout=any
+#aout=
 
 # Media role (string)
 #role=video
@@ -2710,7 +2710,7 @@ aout=any
 #deinterlace-mode=auto
 
 # Video output module (string)
-vout=any
+#vout=
 
 # Video filter module (string)
 #video-filter=
@@ -2983,7 +2983,7 @@ vout=any
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
@@ -3004,7 +3004,7 @@ vout=any
 #random=0
 
 # Repeat all (boolean)
-#loop=0
+loop=1
 
 # Repeat current item (boolean)
 #repeat=0
@@ -3091,7 +3091,7 @@ vout=any
 #extraintf=
 
 # Control interfaces (string)
-#control=
+control=gestures
 
 # Mouse wheel vertical axis control (integer)
 #hotkeys-y-wheel-mode=0

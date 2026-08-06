@@ -14,7 +14,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox"
 
-export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/scripts"
+export PATH="$PATH:$HOME/.cargo/bin/:/sbin/:$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/programs/webots/"
 
 # enable bat to colorize man pages
 # export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
@@ -45,6 +45,15 @@ function y() {
     rm -f -- "$tmp"
 }
 . "$HOME/.cargo/env"
+
+# open nvim in current folder
+function n() {
+    if [ -f session.vim ]; then
+        nvim -S session.vim
+    else
+        nvim .
+    fi
+}
 
 # run ssh-agent
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" > /dev/null

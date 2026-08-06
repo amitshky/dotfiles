@@ -15,6 +15,11 @@ awk '
 ' ~/.config/krenamerc > ~/.config/krenamerc.new &&
 mv ~/.config/krenamerc.new ~/.config/krenamerc
 
+sed -i \
+  -e '/^LastPlayedFile=/d' \
+  -e '/^LastUrl=/d' \
+  ~/dotfiles/.config/haruna/haruna.conf
+
 killall copyq
 sleep 1
 copyq &

@@ -22,6 +22,7 @@ brightness_signal &
 battery_signal &
 hide_cursor &
 volume_level &
+cleanup &
 
 xss-lock --transfer-sleep-lock lockscreen &
 

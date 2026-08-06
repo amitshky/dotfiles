@@ -1,3 +1,15 @@
 #!/usr/bin/env bash
 
-grep -rIl '？' --include='*.vtt' . | xargs -r sed -i 's/？/?/g'
+find . -name '*.vtt' -print0 |
+while IFS= read -r -d '' file; do
+    sed -i \
+        -e 's/？/?/g' \
+        -e 's/！/!/g' \
+        -e 's/，/,/g' \
+        -e 's/。/./g' \
+        -e 's/：/:/g' \
+        -e 's/；/;/g' \
+        -e 's/（/(/g' \
+        -e 's/）/)/g' \
+        "$file"
+done

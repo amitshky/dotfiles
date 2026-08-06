@@ -47,6 +47,7 @@ sudo pacman -S --needed \
     gnome-themes-extra \
     gnupg \
     gpick \
+    haruna \
     htop \
     htop \
     imagemagick \
