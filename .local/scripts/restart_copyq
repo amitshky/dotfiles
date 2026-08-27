@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+killall copyq
+sleep 1
+copyq &

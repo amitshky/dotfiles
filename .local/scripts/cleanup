@@ -19,7 +19,3 @@ sed -i \
   -e '/^LastPlayedFile=/d' \
   -e '/^LastUrl=/d' \
   ~/dotfiles/.config/haruna/haruna.conf
-
-killall copyq
-sleep 1
-copyq &

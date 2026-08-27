@@ -59,18 +59,6 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/almostblue/documents">
-  <title>Documents</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="folder-documents"/>
-   </metadata>
-   <metadata owner="http://www.kde.org">
-    <ID>1768914558/1</ID>
-    <isSystemItem>true</isSystemItem>
-   </metadata>
-  </info>
- </bookmark>
  <bookmark href="file:///home/almostblue/downloads">
   <title>Downloads</title>
   <info>
@@ -79,6 +67,18 @@
    </metadata>
    <metadata owner="http://www.kde.org">
     <ID>1768914558/2</ID>
+    <isSystemItem>true</isSystemItem>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/almostblue/documents">
+  <title>Documents</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-documents"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1768914558/1</ID>
     <isSystemItem>true</isSystemItem>
    </metadata>
   </info>
@@ -178,7 +178,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p3</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p3</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>fa90748f9074545b</uuid>
    </metadata>
@@ -196,7 +196,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p3</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p3</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>292d77ea-6b4d-4293-8708-62179f33dbd0</uuid>
    </metadata>

@@ -57,6 +57,7 @@ sudo pacman -S --needed \
     kde-cli-tools \
     keepassxc \
     kimageformats \
+    kio-admin \
     krename \
     lazygit \
     libqalculate \
