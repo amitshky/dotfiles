@@ -21,6 +21,7 @@ volume_signal &
 brightness_signal &
 battery_signal &
 hide_cursor &
+hive_perm &
 volume_level &
 cleanup &
 
