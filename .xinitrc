@@ -10,6 +10,7 @@ copyq &
 dwmblocks &
 syncthing --no-browser &
 dunst &
+/usr/lib/polkit-kde-authentication-agent-1 &
 
 # for dolphin
 # /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &

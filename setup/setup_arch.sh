@@ -95,6 +95,7 @@ sudo pacman -S --needed \
     pipewire \
     pipewire-pulse \
     playerctl \
+    polkit \
     polkit-kde-agent \
     poppler \
     pulsemixer \

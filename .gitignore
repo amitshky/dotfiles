@@ -14,6 +14,10 @@
 .config/qBittorrent/qBittorrent.conf
 .config/qimgv/savedState.conf
 .config/darktable/*.db*
+
+.local/scripts/lirefox
+
 .gnupg/*
 !.gnupg/gpg-agent.conf
+
 compile_commands.json
