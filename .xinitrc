@@ -17,7 +17,7 @@ dunst &
 
 # scripts
 change_walpaper.sh
-dual_right_display &
+dual_left_display &
 volume_signal &
 brightness_signal &
 battery_signal &

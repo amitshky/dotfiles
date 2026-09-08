@@ -14,6 +14,10 @@
 .config/qBittorrent/qBittorrent.conf
 .config/qimgv/savedState.conf
 .config/darktable/*.db*
+.config/blender/*/config/recent-files.txt
+.config/blender/*/config/recent-searches.txt
+.config/blender/*/config/platform_support.txt
+
 
 .local/scripts/lirefox
 
