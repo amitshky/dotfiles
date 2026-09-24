@@ -10,17 +10,18 @@ alias ll='ls -alh'
 alias ls='ls --color=auto'
 alias vdir='vdir --color=auto'
 
+alias cat="bat --theme=gruvbox-dark" # use \cat to override this alias and use the actual cat command
 alias lg="lazygit"
-alias ti="tmuxinit"
-alias t="tmux"
-alias z="zellij"
-alias qi="qimgv"
 alias mvim="NVIM_APPNAME=nvim-minimal nvim"
-alias wd="cd ~/dev/"
+alias qi="qimgv"
+alias r="ranger"
+alias t="tmux"
+alias ti="tmuxinit"
 alias wc="cd ~/dotfiles/"
+alias wd="cd ~/dev/"
 alias wo="cd ~/sync/ObsidianVault/"
 alias wu="cd ~/documents/notes/"
-alias cat="bat --theme=gruvbox-dark" # use \cat to override this alias and use the actual cat command
+alias z="zellij"
 
 alias cdwm="sudo make -C \"$HOME/.local/src/dwm\" clean install"
 alias cst="sudo make -C \"$HOME/.local/src/st\" clean install"

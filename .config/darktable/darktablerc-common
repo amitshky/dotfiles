@@ -8,3 +8,4 @@ ui/show_welcome_screen=FALSE
 ui_last/gui_language=
 ui_last/theme=darktable-elegant-grey
 use_system_font=false
+workspace/label=
