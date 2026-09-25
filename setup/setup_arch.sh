@@ -98,6 +98,7 @@ sudo pacman -S --needed \
     polkit \
     polkit-kde-agent \
     poppler \
+    proton-vpn-gtk-app
     pulsemixer \
     python \
     python-pip \
@@ -170,7 +171,7 @@ rm -rf "$HOME/dev-not-mine/yay"
 
 echo "installing flatpak packages"
 flatpak install -y app/md.obsidian.Obsidian/x86_64/stable \
-    com.protonvpn.ww app/org.localsend.localsend_app/x86_64/stable 
+    app/org.localsend.localsend_app/x86_64/stable 
 
 echo "installing gf2"
 git clone git@github.com:nakst/gf.git ~/dev-not-mine/gf
