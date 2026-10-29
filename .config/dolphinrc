@@ -7,6 +7,7 @@ ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 [DetailsMode]
 ExpandableFolders=false
 IconSize=48
+PreviewSize=64
 UseSystemFont=false
 ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
@@ -23,6 +24,7 @@ ViewPropsTimestamp=2026,1,20,13,9,18.821
 
 [IconsMode]
 IconSize=64
+PreviewSize=256
 UseSystemFont=false
 ViewFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 

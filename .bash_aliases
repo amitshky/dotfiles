@@ -1,4 +1,4 @@
-alias so='source ~/.bashrc'
+alias sb='source ~/.bashrc'
 
 alias dir='dir --color=auto'
 alias egrep='egrep --color=auto'
@@ -16,7 +16,6 @@ alias mvim="NVIM_APPNAME=nvim-minimal nvim"
 alias qi="qimgv"
 alias r="ranger"
 alias t="tmux"
-alias ti="tmuxinit"
 alias wc="cd ~/dotfiles/"
 alias wd="cd ~/dev/"
 alias wo="cd ~/sync/ObsidianVault/"

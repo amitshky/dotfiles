@@ -140,5 +140,7 @@
   <Action name="view_zoom_in" priority="0"/>
   <Action name="view_zoom_out" priority="0"/>
   <Action name="view_zoom_reset" priority="0"/>
+  <Action name="servicemenu_krename_dir_rec.desktop::rename" shortcut="; "/>
+  <Action name="servicemenu_krename_all_nonrec.desktop::rename" shortcut="Alt+F2"/>
  </ActionProperties>
 </gui>
