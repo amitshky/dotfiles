@@ -49,7 +49,7 @@ function y() {
 # open nvim in current folder
 function n() {
     if [ -f session.vim ]; then
-        nvim -S session.vim
+        nvim -S session.vim -c "bd oil://"
     else
         nvim .
     fi
