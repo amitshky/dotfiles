@@ -31,5 +31,6 @@ alias csall="cdwm && cdm && cdb && cst" # compile all suckless tools
 
 alias dolphin="dolphin -stylesheet $HOME/.config/qt/dolpin-darkmode-fix.qss"
 
-alias pa='pyenv activate'
 alias pd='pyenv deactivate'
+
+alias stuart="robotis@192.168.2.157"

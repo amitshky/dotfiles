@@ -63,8 +63,23 @@ function ti() {
     fi
 }
 
+function pa() {
+    # Initialise pyenv once per Bash session
+    if [[ -z "${PYENV_INITIALIZED:-}" ]]; then
+        eval "$(pyenv init - bash)" || return
+        export PYENV_INITIALIZED=1
+    fi
+
+    # Activate the specified environment, or use .python-version
+    if [[ -n "$1" ]]; then
+        pyenv activate "$1"
+    else
+        pyenv activate
+    fi
+}
+
 # run ssh-agent
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" > /dev/null
 
-eval "$(pyenv init - bash)"
+# eval "$(pyenv init - bash)"
 # eval "$(uv generate-shell-completion bash)"
