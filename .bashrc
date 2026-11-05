@@ -83,3 +83,5 @@ function pa() {
 
 # eval "$(pyenv init - bash)"
 # eval "$(uv generate-shell-completion bash)"
+
+export stuart="robotis@192.168.2.157"

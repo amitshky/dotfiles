@@ -29,6 +29,7 @@ sudo pacman -S --needed \
     copyq \
     darktable \
     discord \
+    dnsmasq \
     docker \
     docker-buildx \
     dolphin \
